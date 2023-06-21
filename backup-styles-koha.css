@@ -1,0 +1,202 @@
+@import url('https://fonts.cdnfonts.com/css/branding-2');
+
+* {
+  font-family: 'Branding', sans-serif; 
+}
+
+body {
+  background-image: url("/cgi-bin/koha/opac-retrieve-file.pl?id=40d4588f111232a6c8af293d0dec1164");
+}
+
+a {
+  color: #ffffff;
+}
+
+#wrapper {
+  padding: 0;
+}
+
+#header-region {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+  order: 1;
+}
+
+.navbar-expand {
+  order: 2;
+  background-color: #fafafa;
+  margin: 0 15px;
+  padding: 8px 12px;
+}
+
+#scrolltocontent {
+  display: none;
+}
+
+ #logo {
+   display: none;
+}
+
+.cartlabel {
+  color: #247777;
+}
+
+.listslabel {
+  color: #247777;
+}
+
+.userlabel {
+  color: #247777;
+}
+
+.login-link {
+  color: #247777 !important;
+}
+
+#carticon {
+  color: #730d73;
+}
+
+.fa.fa-icon-black {
+  color: #730d73;
+}
+
+.btn-primary {
+  background-color: #9b51e0;
+  border: solid 1px #730d73;
+  background-image: linear-gradient(180deg, #993399, #730d73);
+}
+
+.btn-primary:hover {
+  background-color: #730d73;
+  border: solid 1px #730d73;
+  background-image: linear-gradient(180deg, #993399, #730d73);
+}
+
+#opac-main-search {
+  background-color: #25a2a2;
+  margin: 0 -15px;
+}
+
+.col-sm-auto .order-1 .order-sm-1 {
+  color: red;
+}
+
+.order-sm-1 {
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumb {
+  margin: 0px 0px 15px 0px;
+  background-color: #16979e;
+}
+
+.main {
+  padding-top: 0px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.breadcrumb-item.active {
+  
+  color: #fff;
+}
+
+.clearsh {
+    color: #e8583c;
+}
+
+.clearsh:hover {
+    color: #e8583c;
+}
+
+label {
+  color: inherit;
+}
+
+legend {
+  color: #247777;
+}
+
+.brief {
+  color: #25a2a2 !important;
+  font-weight: 600;
+}
+
+.col-sm-auto.order-1 {
+  color: #fff;
+}
+
+button {
+  color: #247777;
+}
+
+#inlibro-carrousel {
+  color: none;
+}
+
+#carrousel-0 {
+  color: #247777;
+}
+
+h2 {
+  color: #247777;
+}
+
+#inlibro-carrousel h2 {
+  color: #247777 !important;
+}
+
+.row {
+  background-color: #fff;
+  margin: 0px;
+}
+
+.col {
+  margin: 0 -8px;
+}
+
+#inlibro-carrousel button {
+  color: #247777 !important;
+  font-weight: bold !important;
+}
+
+#opac-main-search label {
+  color: #fff !important;
+}
+
+.breadcrumb-item.active a{
+  color: #fff !important;
+  font-size: 1.1em !important;
+  font-weight: 600 !important;
+  margin: 10px 5px;
+}
+
+#moresearches {
+    margin: 0.6em 30px;
+    padding: 5px 15px;
+}
+
+#opacheader {
+  margin: 0 -15px;
+}
+
+.order-sm-2 {
+  margin-right: 8px;
+}
+
+.order-sm-4 {
+  margin-left: 8px;
+}
+
+.nav-item a {
+  font-size: 1.1em;
+}
