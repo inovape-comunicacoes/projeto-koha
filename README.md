@@ -268,11 +268,12 @@ button {
 Nessa sessão vou falar de como funciona o anuncio, caso não queira entender sobre o anuncio, apenas vá para parte do [Anuncio completo](#anuncio-completo), se você veio nessa sessão porque quer fazer algumas modificações no anuncio, veio ao lugar certo.<br></br>
 
 <h2>Como mudar a cor de fundo do anuncio</h2>
-Para o anuncio foi utilizado a tag 
+Se você alterar dessa forma todos os anuncios ficarão com  mesma cor, para deixar cada anuncio com uma cor diferente
+Para o anuncio foi utilizado a tag section,
 
-`<section></section>` com o id="Noticia" essa é a tag que contem todos os elementos do anuncio e possui essa estilização
+`<section></section>` com a class="Noticia" essa é a tag que contem todos os elementos do anuncio e possui essa estilização:
 ```css
-    #Noticia {
+    .Noticia {
           display: flex;
           flex-direction: row;
           background-color: #730d73;
@@ -283,15 +284,18 @@ Para o anuncio foi utilizado a tag
         }
 ```
 
-Se voce quiser mudar a cor do fundo do anuncio mude o valor da propriedade background-color, você pode colocar o nome da cor em ingles ou colocar em hexadecimal ou em rgb.
+Se voce quiser mudar a cor do fundo do anuncio mude o valor da propriedade background-color, você pode colocar o nome da cor em inglês ou colocar em hexadecimal ou em rgb.
+obs: se voce mudar a cor no css vai alterar a cor de todos os anúncios e evite colocar acentos e caracteres especiais
 
 [Mais informações](https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb)
 
-<h2>Como deixar 2 anuncios com cores de fundo diferente</h2>
-Se você estiver colocando um segundo anuncio e quer deixar cada anuncio com uma cor de fundo diferente, mude o id como no exemplo abaixo, porque se ficar o mesmo id, os dois vão ficar em conflito e vai ficar a cor do ultimo anuncio.
+<h2>Como deixar 2 anúncios com cores de fundo diferente</h2>
+Se você estiver colocando um segundo anúncio e quer deixar cada anúncio com uma cor de fundo diferente, procure a tag html e mude o valor da propriedade background-color, como exemplo abaixo. 
+Se você pulou a parte de como estilizar um anuncio não deve ter entendido a propriedade background-color, ela serve para definir a cor de uma sessão, você pode color o nome das cores em inglês ou colocar o codigo da cor em hexadecimal ou rgb.
 
 ```html
-<section id="Noticia2" style="background-color: cor;">
+<section class="Noticia" style="background-color: red;">
+    <!-- resto do codigo html -->
 </section>
 ```
 
