@@ -142,7 +142,7 @@ seletor {
 }
 ```
 
-para se estilizar tags html você precisa selecionar a tag que você quer estilizar, no exemplo acima foi usada a tag html, mas é possivel utilizar tags: `<a>, <input>, <div>, <button>, <div>` e etc
+para se estilizar tags html você precisa selecionar a tag que você quer estilizar, substitua o "seletor" por o nome da tag html(`<a>, <input>, <div>, <button>, <div>`), nome da classe (`.Nome-do-elemento`) ou do id (`#Nome_do_id`).
 <br></br>
 
 Talvez você não tenha entendido o que é esse px, px é abreviação para pixel(s), ele é uma unidade de medida com valores fixos, que não vão e adaptar as mudanças em cada dispositivo então é bom ter um pouco de cuidado, porém existem outras unidades de medida fixas e relativas. Não irei colocar todas as unidades de medida, so aquelas mais relevantes, porém caso queira saber mais [clique no link](https://www.alura.com.br/artigos/guia-de-unidades-no-css)
@@ -237,7 +237,10 @@ Também é possível colocar um único valor para todos os lados:
 div {
     margin: auto;
 }
+
 ```
+[w3school](https://www.w3schools.com/css/css_margin.asp) <br>
+[mdn](https://developer.mozilla.org/pt-BR/docs/Web/CSS/margin)
 
 <h2>Preenchimento - padding</h2>
 
@@ -263,6 +266,9 @@ button {
     padding: auto;
 }
 ```
+
+[w3school](https://www.w3schools.com/css/css_padding.asp)
+[mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 # Sobre o Anúncio
 Nessa sessão vou falar de como funciona o anúncio, caso não queira entender sobre o anúncio, apenas vá para parte do [Anuncio completo](#anuncio-completo), se você veio nessa sessão porque quer fazer algumas modificações no anúncio, veio ao lugar certo.<br></br>
@@ -422,33 +428,40 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
         }
       </style>
     <div class="primeira-coluna">
+        <!-- Altere aqui o nome do Titulo do anúncio-->
         <h2 class="titulo-noticia">
-            Escola Municipal     jarlece Zaranza faz leitura teatro infantil
+            Mude o nome da escola
         </h2>
         <div class="secao-instagram">
             <img src="https://inovape-comunicacoes.github.io/projeto-koha/imagens//icons8-instagram-256.png" alt="logo instagram" class="logo-instagram" 
             /> 
+            <!-- Altere aqui o link e o texto do link para instagram-->
             <a 
                 class="id-instagram" 
-                href="https://instagram.com"
+                href="https://www.instagram.com/semedmanaus/"
             > 
                 @Semed_Oficial 
             </a>
         </div>
     </div>
     <div class="segunda-coluna">
-        <p class="paragrafo-noticia">
+    <!-- Altere aqui o texto do anúncio -->
+        <p class="paragrafo-noticia">        
                 "Ler &eacute;     legal a qualquer hora" foi o lema usado na produ&ccedil;&atilde;o teatral e no incentivo na forma&ccedil;&atilde;o dos leitores. As escolheram o livro e produziram a pe&ccedil;a com orienta&ccedil;&atilde;o do biblioec&aacute;rio e professores. Agora est&atilde;o convidado a comunidade para participarem da apresenta&ccedil;&atilde;o.
         </p>
         <div class="div-informacoes">
+            <!-- Altere aqui a data do anúncio -->
             <span class="span-quando"> 
-                Quando: 23/06/2023 </span> 
+                Quando: 23/06/2023 
+            </span> 
+            <!-- Altere aqui o local  -->
             <span class="span-onde">
                 Onde: Quadra da escola             
             </span>
         </div>
     </div>
     <div class="terceira-coluna">
+        <!-- Altere aqui a imagem do anúncio -->
         <img 
             src="https://www.canoas.rs.gov.br/ wp-content/uploads/2019/08/Pablo-Reis-30.jpg" alt="professora dando uma palestra" class="imagem-noticia" />
     </div>
