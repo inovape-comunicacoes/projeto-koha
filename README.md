@@ -265,13 +265,13 @@ button {
 ```
 
 # Sobre o Anuncio
-Nessa sessão vou falar de como funciona o anuncio, caso não queira entender sobre o anuncio, apenas vá para parte do [Anuncio completo](#anuncio-completo), se você veio nessa sessão porque quer fazer algumas modificações no anuncio, veio ao lugar certo.<br></br>
+Nessa sessão vou falar de como funciona o anúncio, caso não queira entender sobre o anúncio, apenas vá para parte do [Anuncio completo](#anuncio-completo), se você veio nessa sessão porque quer fazer algumas modificações no anúncio, veio ao lugar certo.<br></br>
 
 <h2>Como mudar a cor de fundo do anuncio</h2>
-Se você alterar dessa forma todos os anuncios ficarão com  mesma cor, para deixar cada anuncio com uma cor diferente
-Para o anuncio foi utilizado a tag section,
+Se você alterar dessa forma todos os anúncios ficarão com  mesma cor, para deixar cada anúncio com uma cor diferente vá para para a parte de como deixar 2 anúncios com cores de fundo diferentes que está depois desse tópico.
+Para o anúncio foi utilizado a tag section,
 
-`<section></section>` com a class="Noticia" essa é a tag que contem todos os elementos do anuncio e possui essa estilização:
+`<section></section>` com a class="Noticia" essa é a tag que contem todos os elementos do anúncio e possui essa estilização:
 ```css
     .Noticia {
           display: flex;
@@ -284,7 +284,7 @@ Para o anuncio foi utilizado a tag section,
         }
 ```
 
-Se voce quiser mudar a cor do fundo do anuncio mude o valor da propriedade background-color, você pode colocar o nome da cor em inglês ou colocar em hexadecimal ou em rgb.
+Se voce quiser mudar a cor do fundo do anúncio mude o valor da propriedade background-color, você pode colocar o nome da cor em inglês ou colocar em hexadecimal ou em rgb.
 obs: se voce mudar a cor no css vai alterar a cor de todos os anúncios e evite colocar acentos e caracteres especiais
 
 [Mais informações](https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb)
@@ -303,7 +303,7 @@ Se você pulou a parte de como estilizar um anuncio não deve ter entendido a pr
 
 
 # Anuncio Completo
-so copie e cole o codigo abaixo na pagina de anuncio. Não esqueça de mudar o titulo, texto, data e imagem do anuncio.
+so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o titulo, texto, data e imagem do anúncio.
 ```hml
 <!-- Noticias -->
 <section class="Noticia">
