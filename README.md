@@ -129,7 +129,7 @@ Mais informações sobre listas não ordenadas:
 
 
 # Como estilizar os anúncios
-Para se estilizar o html de uma página, se utiliza a linguagem css, através dela vocecomo no exemplo abaixo;
+Para se estilizar o html de uma página, se utiliza a linguagem css, através dela voce pode mudar cores, tamanhos e formato dos elementos html.
 ```css
 seletor {
     propriedade: valor;
@@ -175,7 +175,7 @@ button {
 ```
 <br><br>
 <h2>Medidas Relativas</h2>
-Essas são as que normalmente não estamos habituados. Essas medidas são calculadas tendo como base uma outra unidade de medida definida, como por exemplo em e o rem.
+Essas são as que normalmente não estamos habituados. Essas medidas são calculadas tendo como base uma outra unidade de medida definida, como por exemplo "em" e o "rem".
 
 O uso delas é mais apropriado para que possamos fazer ajustes em diferentes dispositivos garantindo um layout consistente e fluido em diversas mídias.
 
