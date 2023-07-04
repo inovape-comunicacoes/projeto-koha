@@ -1,22 +1,22 @@
-<h1 align="center">Documentação do Anuncios Koha Opac</h1>
+<h1 align="center">Documentação do Anúncios Koha Opac</h1>
 
 <h2>
  Sobre
 </h2>
-Essa documentação foi feita para esclarecer ao administrador da biblioteca da forma mais simples de como criar e personalizar os anuncios do koha opac. Mas com detalhes de como se aprofundar na linguagem html e css.
+Essa documentação foi feita para esclarecer ao administrador da biblioteca da forma mais simples de como criar e personalizar os anúncios do koha opac. Mas com detalhes de como se aprofundar na linguagem html e css.
 <p>
-OBS: Mesmo quem não entende nada de html ou css pode copiar o modelo pronto e estilizado de anuncio. Continue lendo essa documentação para mais detalhes
+OBS: Mesmo quem não entende nada de html ou css pode copiar o modelo pronto e estilizado de anúncio. Continue lendo essa documentação para mais detalhes
 </p>
 
 <br></br>
 <h2>Sumario</h2>
 
 - [Uma breve introdução ao HTML](#uma-breve-introdução-ao-html)
-- [Como estilizar os anuncios](#como-estilizar-os-anuncios)
+- [Como estilizar os anúncios](#como-estilizar-os-anúncios)
 - [Dicas de css](#dicas-de-css)
-- [Sobre o Anuncio](#sobre-o-anuncio)
-- [Anuncio Completo](#anuncio-completo)
-- [Duvidas](#duvidas)
+- [Sobre o Anúncio](#sobre-o-anúncio)
+- [Anúncio Completo](#anúncio-completo)
+- [Dúvidas](#dúvidas)
 
 <!---->
 
@@ -27,7 +27,7 @@ OBS: Mesmo quem não entende nada de html ou css pode copiar o modelo pronto e e
 
 
 # Uma breve introdução ao HTML
-Essa sessão foi criada caso queira saber um pouco mais sobre html para modificar os anuncios do koha. Se você não pretende fazer modicicações na estrutura do anuncio, e sim fazer modificações estéticas como cores e ordem dos elementos, pule essa sessão e vá para a parte de [Como estilizar os anuncios](#como-estilizar-os-anuncios)
+Essa sessão foi criada caso queira saber um pouco mais sobre html para modificar os anúncios do koha. Se você não pretende fazer modificações na estrutura do anúncio, e sim fazer modificações estéticas como cores e ordem dos elementos, pule essa sessão e vá para a parte de [Como estilizar os anuncios](#como-estilizar-os-anuncios)
 <p>
 O html é uma linguagem feita para criar paginas web.
 Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome do elemento entre "<" e ">". O nome de um elemento dentro de uma tag é insensível a maiúsculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. Por exemplo, a tag 
@@ -128,7 +128,7 @@ Mais informações sobre listas não ordenadas:
 <br></br>
 
 
-# Como estilizar os anuncios
+# Como estilizar os anúncios
 Para se estilizar o html de uma página, se utiliza a linguagem css, através dela vocecomo no exemplo abaixo;
 ```css
 seletor {
@@ -264,7 +264,7 @@ button {
 }
 ```
 
-# Sobre o Anuncio
+# Sobre o Anúncio
 Nessa sessão vou falar de como funciona o anúncio, caso não queira entender sobre o anúncio, apenas vá para parte do [Anuncio completo](#anuncio-completo), se você veio nessa sessão porque quer fazer algumas modificações no anúncio, veio ao lugar certo.<br></br>
 
 <h2>Como mudar a cor de fundo do anuncio</h2>
@@ -302,7 +302,7 @@ Se você pulou a parte de como estilizar um anuncio não deve ter entendido a pr
 
 
 
-# Anuncio Completo
+# Anúncio Completo
 so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o titulo, texto, data e imagem do anúncio.
 ```hml
 <!-- Noticias -->
@@ -457,4 +457,4 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
 ```
 
 
-# Duvidas
+# Dúvidas
