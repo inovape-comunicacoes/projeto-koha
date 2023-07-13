@@ -69,162 +69,257 @@
      
     
     <body id="opac-main" class="branch-default" data-new-gr-c-s-check-loaded="14.1108.0" data-gr-ext-installed="">
-
-
-    <!-- Noticias -->
-<section class="Noticia">
-    <style>
-        .Noticia {
-          display: flex;
-          flex-direction: row;
-          background-color: #730d73;
-          padding: 20px 10px;
-          color: #fff;
-          justify-content: space-evenly;
-          margin: 6px;
-        }
-
-        .primeira-coluna {
-          display: flex;
-          flex-direction: column;
-          width: 28%;
-          justify-content: space-around;
-          margin: 0 15px 0 5px;
-        }
-
-        .segunda-coluna {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          width: 38%;
-          padding: 0 5%;
-        }
-
-        .terceira-coluna {
-          display: flex;
-          flex-direction: column;
-          width: 34%;
-        }
-
-        .imagem-noticia {
-          width: 95%;
-          margin: auto;
-        }
-
-        .secao-instagram {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-        }
-
-        .logo-instagram {
-          width: 32px;
-        }
-
-        .titulo-noticia {
-          color: #fff;
-          text-align: center;
-          font-size: 2em;
-        }
-
-        .span-quando {
-          text-align: center;
-          font-size: 1em;
-          font-weight: bold;
-        }
-
-        .span-onde {
-          text-align: center;
-          font-size: 1em;
-          font-weight: bold;
-        }
-
-        .paragrafo-noticia {
-          text-align: center;
-        }
-
-        .id-instagram{
-          font-size: 1.2em;
-          margin-left: 2px;
-          color: #fff;
-        }
-
-        .div-informacoes {
-          display: flex;
-          flex-direction: column;
-        }
-
-        @media screen and (max-width: 800px) {
-            .Noticia {
-                flex-direction: column;
+        <style type="text/css"> 
+            #scrolltocontent {
+                display: none ;
             }
-
-            .secao-instagram {
-                display: none;
-            }
-
-            .primeira-coluna {
-                width: 100%;
-                margin-bottom: 10px ;
-            }
-
-            .segunda-coluna {
-                width: 100%;
-            }
-
-            .terceira-coluna {
-                width: 100%;
-                justify-content: center;
-                margin-top: 15px;
-            }
-
-            .titulo-noticia {
-                font-size: 1.5em;
-            }
-
-            .paragrafo-noticia {
-                text-align: center;
-            }
-        }
-      </style>
-    <div class="primeira-coluna">
-        <h2 class="titulo-noticia">
-            Escola Municipal     jarlece Zaranza faz leitura teatro infantil
-        </h2>
-        <div class="secao-instagram">
-            <img src="https://inovape-comunicacoes.github.io/projeto-koha/imagens//icons8-instagram-256.png" alt="logo instagram" class="logo-instagram" 
-            /> 
-            <a 
-                class="id-instagram" 
-                href="https://instagram.com"
-            > 
-                @Semed_Oficial 
+        </style>
+        <!--  Cabeçalho  -->
+        <header>
+            <section class="cabecalho">
+            <!--  cor antiga do cabeçalho#16979e -->
+                <style type="text/css">
+                    .cabecalho {
+                        height: 75px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        background-color: #16979e;
+                        padding: 15px 30px;
+                    }
+          
+                    .logo-prefeitura {
+                        width: 300px;
+                    }
+          
+                    .span-informacoes {
+                        font-size: 1em;
+                        font-weight: 700;
+                    }
+        
+                    .link-redes-sociais:hover {
+                        color: #16979e;
+                    }
+          
+                    @media screen and (max-width: 1000px) {
+                        .logo-prefeitura {
+                            width: 250px;
+                        }
+          
+                        .span-informacoes {
+                            font-size: 0.9em;
+                        }
+                    }
+          
+                    @media screen and (max-width: 800px) {
+                        .div-icones-de-redes-sociais {
+                            display: none;
+                            width: 0px;  
+                        }
+          
+                        .icones-redes-sociais {
+                            width: 0px;
+                            display: none;
+                        }
+          
+                        .logo-prefeitura {
+                            width: 190px;
+                        }
+          
+                        .span-informacoes {
+                            font-size: 0.8em;
+                        }
+          
+                        .cabecalho {
+                            padding: 15px 25px;
+                        }
+                    }
+          
+                    @media screen and (max-width: 600px) {
+                        .cabecalho {
+                            padding: 5px 10px;
+                        }
+                        .logo-prefeitura {
+                            width: 150px;
+                        }
+          
+                        .span-informacoes {
+                            font-size: 0.7em;
+                        }
+                    }
+              </style>
+        <div class="div-logos">
+            <a href="https://www.manaus.am.gov.br/"> 
+                <img src="./imagens/logos/Marca%20Educa%C3%A7%C3%A3o%20Semed.png" alt="logo prefeitura de manaus" class="logo-prefeitura" /> 
             </a>
         </div>
-    </div>
-    <div class="segunda-coluna">
-        <p class="paragrafo-noticia">
-                "Ler &eacute;     legal a qualquer hora" foi o lema usado na produ&ccedil;&atilde;o teatral e no incentivo na forma&ccedil;&atilde;o dos leitores. As escolheram o livro e produziram a pe&ccedil;a com orienta&ccedil;&atilde;o do biblioec&aacute;rio e professores. Agora est&atilde;o convidado a comunidade para participarem da apresenta&ccedil;&atilde;o.
-        </p>
-        <div class="div-informacoes">
-            <span class="span-quando"> 
-                Quando: 23/06/2023 </span> 
-            <span class="span-onde">
-                Onde: Quadra da escola             
-            </span>
+        <div class="informacoes" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+            <a href="https://transparencia.manaus.am.gov.br/transparencia/v2/#/home" class="span-informacoes" style="color: #fff; border-right: #dfdfdf 2px solid; padding-right: 7px;"> 
+                Transpar&ecirc;ncia
+            </a> 
+            <a href="https://transparencia.manaus.am.gov.br/transparencia/v2/#/lai" class="span-informacoes" style="color: #fff; margin-left: 7px;">
+                 Acesso &agrave; informa&ccedil;&atilde;o 
+            </a>
         </div>
-    </div>
-    <div class="terceira-coluna">
-        <img 
-            src="https://www.canoas.rs.gov.br/ wp-content/uploads/2019/08/Pablo-Reis-30.jpg" alt="professora dando uma palestra" class="imagem-noticia" />
-    </div>
-</section>
-<!-- Fim das Noticias-->
-    
-    
-    
-    
-    
+        
+        <div
+          class="div-icones-de-redes-sociais"
+          style="width: 250px; text-align: center; max-height: 50px"
+        >
+          <!-- 
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+                  <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
+                      <img src="./imagens/icons8-f-do-facebook-240.png" alt="f do facebook branco" style="width: 32px;">
+                  </button>
+                  <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
+                      <img src="./imagens//icons8-instagram-256.png" alt="logo do instagram" style="width: 32px;">
+                  </button>
+                  <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
+                      <img src="./imagens/icons8-twitter-256.png" style="width: 32px;">
+                  </button>
+                  <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
+                      <img src="./imagens/icons8-reproduzir-youtube-256.png" style="width: 32px;">
+                  </button>
+                  <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
+                      <img src="./imagens/icons8-aplicação-telegrama-250.png" style="width: 28px;">
+                  </button>
+              -->
+          <a href="https://www.facebook.com" class="link-redes-sociais">
+            <img
+              src="./imagens/icons8-f-do-facebook-240.png"
+              alt="f do facebook branco"
+              style="width: 28px; margin: 5px"
+              class="icones-redes-sociais"
+            />
+          </a>
+          <a href="https://www.instagram.com" class="ancora">
+            <img
+              src="./imagens//icons8-instagram-256.png"
+              alt="logo do instagram"
+              style="width: 28px; margin: 5px"
+              class="icones-redes-sociais"
+            />
+          </a>
+          <a href="https://www.twitter.com" class="ancora">
+            <img
+              src="./imagens/icons8-twitter-256.png"
+              alt="lodo do twitter"
+              style="width: 28px; margin: 5px"
+              class="icones-redes-sociais"
+            />
+          </a>
+          <a href="https://www.youtube.com" class="ancora">
+            <img
+              src="./imagens/icons8-reproduzir-youtube-256.png"
+              alt="logo do youtube"
+              style="width: 28px; margin: 5px"
+              class="icones-redes-sociais"
+            />
+          </a>
+          <a href="https://www.telegram.com" class="ancora">
+            <img
+              src="./imagens/icons8-aplicação-telegrama-250.png"
+              alt="icone do telegram"
+              style="width: 24px; margin: 5px"
+              class="icones-redes-sociais"
+            />
+          </a>
+        </div>
+      </section>
+            <!-- Barra biblioteca digital -->
+        <section class="Barra-Biblioteca-Digital">
+            <div class="div-img-biblioteca-digital" style="height: 100%; width: 30%; padding: 0px; cursor: pointer;" onclick="window.location='https://biblioteca-cfpm-semed.manaus.am.gov.br/';">
+                <img src="./imagens/logos/Marca%20Biblioteca%20Digital.jpg" alt="logo semed" class="img-biblioteca-digital-semed" />
+            </div>
+            <div class="div-h2">
+                <h2 class="texto-h2">BIBLIOTECAS ESCOLARES <br />INTEGRADAS</h2>
+            </div>
+        <!-- Estilização -->
+        <style type="text/css">
+                    .div-img-biblioteca-digital {
+                       display: flex;
+                       align-items: center;
+                       width: 20%;
+                    }
+        
+                    .img-biblioteca-digital-semed {
+                      height: 100%;
+                      margin-left: 6%;
+                      display: block;
+                    }
+        
+                    .Barra-Biblioteca-Digital {
+                      height: 140px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      background-color: #fff;
+                      padding: 1px;
+                    }
+          
+                    .texto-h2 {
+                      color: #730d73;
+                      font-size: 2.3em;
+                      height: 88px;
+                      text-align: center;
+                      margin: 0;
+                      font-weight: bolder;
+                    }
+          
+                    .div-h2 {
+                      height: 100%;
+                      width: 80%;
+                      background-image: url('./imagens/logos/Textura%20Transparente%20Prefeitura.png');
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    }
+                    @media screen and (max-width: 1000px) {
+                      .Barra-Biblioteca-Digital {
+                        height: 100px;
+                      }
+              
+                      .texto-h2 {
+                        font-size: 1.7em;
+                        height: 50px;
+                        margin: auto 0;
+                      }
+          
+                      
+                    }
+                    @media screen and (max-width: 600px) {
+                      .Barra-Biblioteca-Digital {
+                        height: 90px;
+                      }
+              
+                      .texto-h2 {
+                        font-size: 1em;
+                        height: 30px;
+                      }
+          
+                      .div-h2 {
+                        width: 50%;
+                      }
+          
+                      .img-biblioteca-digital-semed {
+                        margin: 0 15px 0 15px;
+                        height: 60px;
+                      }
+                    }
+                  
+                  </style>
+        </section>
+        
+      
+        </header>
+        <!-- Fim do cabeçalho-->
+        
+
+            
     
     
     
@@ -235,6 +330,8 @@
     
     
     <div id="wrapper">
+        
+
      <div id="header-region" class="noprint">
      <nav class="navbar navbar-expand">
      <button id="scrolltocontent">Ir para o conteúdo principal</button>
@@ -1317,6 +1414,155 @@
      </div> <!-- /.container-fluid -->
      
      </div> <!-- / #wrapper in masthead.inc -->
+      <!-- Noticias -->
+<section class="Noticia">
+    <style>
+        .Noticia {
+          display: flex;
+          flex-direction: row;
+          background-color: #730d73;
+          padding: 20px 10px;
+          color: #fff;
+          justify-content: space-evenly;
+          margin: 6px;
+        }
+
+        .primeira-coluna {
+          display: flex;
+          flex-direction: column;
+          width: 28%;
+          justify-content: space-around;
+          margin: 0 15px 0 5px;
+        }
+
+        .segunda-coluna {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 38%;
+          padding: 0 5%;
+        }
+
+        .terceira-coluna {
+          display: flex;
+          flex-direction: column;
+          width: 34%;
+        }
+
+        .imagem-noticia {
+          width: 95%;
+          margin: auto;
+        }
+
+        .secao-instagram {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .logo-instagram {
+          width: 32px;
+        }
+
+        .titulo-noticia {
+          color: #fff;
+          text-align: center;
+          font-size: 2em;
+        }
+
+        .span-quando {
+          text-align: center;
+          font-size: 1em;
+          font-weight: bold;
+        }
+
+        .span-onde {
+          text-align: center;
+          font-size: 1em;
+          font-weight: bold;
+        }
+
+        .paragrafo-noticia {
+          text-align: center;
+        }
+
+        .id-instagram{
+          font-size: 1.2em;
+          margin-left: 2px;
+          color: #fff;
+        }
+
+        .div-informacoes {
+          display: flex;
+          flex-direction: column;
+        }
+
+        @media screen and (max-width: 800px) {
+            .Noticia {
+                flex-direction: column;
+            }
+
+            .secao-instagram {
+                display: none;
+            }
+
+            .primeira-coluna {
+                width: 100%;
+                margin-bottom: 10px ;
+            }
+
+            .segunda-coluna {
+                width: 100%;
+            }
+
+            .terceira-coluna {
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .titulo-noticia {
+                font-size: 1.5em;
+            }
+
+            .paragrafo-noticia {
+                text-align: center;
+            }
+        }
+      </style>
+    <div class="primeira-coluna">
+        <h2 class="titulo-noticia">
+            Escola Municipal     jarlece Zaranza faz leitura teatro infantil
+        </h2>
+        <div class="secao-instagram">
+            <img src="./imagens//icons8-instagram-256.png" alt="logo instagram" class="logo-instagram" 
+            /> 
+            <a 
+                class="id-instagram" 
+                href="https://instagram.com"
+            > 
+                @Semed_Oficial 
+            </a>
+        </div>
+    </div>
+    <div class="segunda-coluna">
+        <p class="paragrafo-noticia">
+                "Ler &eacute;     legal a qualquer hora" foi o lema usado na produ&ccedil;&atilde;o teatral e no incentivo na forma&ccedil;&atilde;o dos leitores. As escolheram o livro e produziram a pe&ccedil;a com orienta&ccedil;&atilde;o do biblioec&aacute;rio e professores. Agora est&atilde;o convidado a comunidade para participarem da apresenta&ccedil;&atilde;o.
+        </p>
+        <div class="div-informacoes">
+            <span class="span-quando"> 
+                Quando: 23/06/2023 </span> 
+            <span class="span-onde">
+                Onde: Quadra da escola             
+            </span>
+        </div>
+    </div>
+    <div class="terceira-coluna">
+        <img 
+            src="https://www.canoas.rs.gov.br/ wp-content/uploads/2019/08/Pablo-Reis-30.jpg" alt="professora dando uma palestra" class="imagem-noticia" />
+    </div>
+</section>
+<!-- Fim das Noticias-->
 
      <!--Novas imagens do koha-->
      <img src="./imagens/icone-biblioteca-semed.png" alt="icone da biblioeca da semed"> 
