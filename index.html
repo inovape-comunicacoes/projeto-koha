@@ -1,1657 +1,1223 @@
-<html lang="pt-BR" class="js fonts-loaded">
-  <head>
-    <script
-      src="https://kit.fontawesome.com/2086a3e898.js"
-      crossorigin="anonymous"
-    ></script>
+<html lang="pt-BR" class=" js  fonts-loaded"><head>
 
     <title>Koha online catálogo</title>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="generator" content="Koha 21.0502000" />
-    <!-- leave this for stats -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link
-      rel="shortcut icon"
-      href="https://admbiblioteca-cfpm-semed.manaus.am.gov.br/intranet-tmpl/prog/img/favicon.ico"
-      type="image/x-icon"
-    />
-
-    <link
-      href="/opac-tmpl/bootstrap/lib/jquery/jquery-ui-1.12.1.min_21.0502000.css"
-      type="text/css"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/opac-tmpl/bootstrap/css/opac_21.0502000.css"
-    />
-
-    <link
-      media="print"
-      href="/opac-tmpl/bootstrap/css/print_21.0502000.css"
-      type="text/css"
-      rel="stylesheet"
-    />
-
+    
+    <link type="text/css" href="./opac-tmpl/bootstrap/css/opac_21.0502000.css">
+    <link type="text/css" href="./opac-tmpl/bootstrap/css/print_21.05.02000.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="Koha 21.0502000"> <!-- leave this for stats -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="https://admbiblioteca-cfpm-semed.manaus.am.gov.br/intranet-tmpl/prog/img/favicon.ico" type="image/x-icon">
+    
+    <link href="/opac-tmpl/bootstrap/lib/jquery/jquery-ui-1.12.1.min_21.0502000.css" type="text/css" rel="stylesheet">
+    
+    
+     
+     
+     
+    
+    
+    <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/css/opac_21.0502000.css">
+    
+    
+    
+    
+    <link media="print" href="/opac-tmpl/bootstrap/css/print_21.0502000.css" type="text/css" rel="stylesheet">
+    
+    
     <style>
-      body {
-        background-image: url("/cgi-bin/koha/opac-retrieve-file.pl?id=40d4588f111232a6c8af293d0dec1164");
-      }
+        body {
+      background-image: url("/cgi-bin/koha/opac-retrieve-file.pl?id=40d4588f111232a6c8af293d0dec1164"); 
+    }
     </style>
-
-    <script src="./opac-tmpl/bootstrap/lib/enquire.min_21.0502000.js"></script>
-    <script src="/opac-tmpl/bootstrap/js/script_21.0502000.js"></script>
+    
+    
+    
+    
+    <script src="./opac-tmpl/bootstrap/lib/enquire.min_21.0502000.js"></script><script src="/opac-tmpl/bootstrap/js/script_21.0502000.js"></script>
     <script>
-      var Koha = {};
-      function _(s) {
-        return s;
-      } // dummy function for gettext
+        var Koha = {};
+        function _(s) { return s } // dummy function for gettext
     </script>
-
-    <script src="/opac-tmpl/bootstrap/pt-BR/js/locale_data_21.0502000.js"></script>
-
+    
+     <script src="/opac-tmpl/bootstrap/pt-BR/js/locale_data_21.0502000.js"></script>
+    
     <script src="/opac-tmpl/bootstrap/js/Gettext_21.0502000.js"></script>
     <script src="/opac-tmpl/bootstrap/js/i18n_21.0502000.js"></script>
-
+    
     <script src="/opac-tmpl/bootstrap/lib/modernizr.min_21.0502000.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/opac-tmpl/bootstrap/lib/font-awesome/css/font-awesome.min_21.0502000.css"
-    />
-  </head>
+    <link type="text/css" rel="stylesheet" href="/opac-tmpl/bootstrap/lib/font-awesome/css/font-awesome.min_21.0502000.css">
+    
+    
+    
+    
+    
+    
+    
+    </head>
+    
+    
+    
+    
+     
+    
+    
+    
+    
+    
+     
+    
+    <body id="opac-main" class="branch-default" data-new-gr-c-s-check-loaded="14.1108.0" data-gr-ext-installed="">
 
-  <body
-    id="opac-main"
-    class="branch-default"
-    data-new-gr-c-s-check-loaded="14.1108.0"
-    data-gr-ext-installed=""
-  >
-    <!--  Cabeçalho  -->
-    <div
-      class="cabecalho"
-      style="
-        height: 80px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #247777;
-        padding: 15px 30px;
-      "
-    >
-      <div class="div-logos">
-        <img
-          src="./imagens/logos/Marca Educação Semed.png"
-          alt="logo prefeitura de manaus"
-          style="width: 300px"
-        />
-      </div>
-      <div
-        class="informacoes"
-        style="
+
+    <!-- Noticias -->
+<section class="Noticia">
+    <style>
+        .Noticia {
           display: flex;
           flex-direction: row;
+          background-color: #730d73;
+          padding: 20px 10px;
+          color: #fff;
           justify-content: space-evenly;
-        "
-      >
-        <span
-          style="
-            color: #fff;
-            border-right: #dfdfdf 2px solid;
-            padding-right: 7px;
-          "
-          >Transparência</span
-        >
-        <span style="color: #fff; margin-left: 7px">Acesso á informação</span>
-      </div>
+          margin: 6px;
+        }
 
-      <div
-        class="icones-de-redes-sociais"
-        style="
+        .primeira-coluna {
+          display: flex;
+          flex-direction: column;
+          width: 28%;
+          justify-content: space-around;
+          margin: 0 15px 0 5px;
+        }
+
+        .segunda-coluna {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 38%;
+          padding: 0 5%;
+        }
+
+        .terceira-coluna {
+          display: flex;
+          flex-direction: column;
+          width: 34%;
+        }
+
+        .imagem-noticia {
+          width: 95%;
+          margin: auto;
+        }
+
+        .secao-instagram {
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
-          width: 250px;
-        "
-      >
-        <!-- 
-                <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
-                    <img src="./imagens/icons8-f-do-facebook-240.png" alt="f do facebook branco" style="width: 32px;">
-                </button>
-                <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
-                    <img src="./imagens//icons8-instagram-256.png" alt="logo do instagram" style="width: 32px;">
-                </button>
-                <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
-                    <img src="./imagens/icons8-twitter-256.png" style="width: 32px;">
-                </button>
-                <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
-                    <img src="./imagens/icons8-reproduzir-youtube-256.png" style="width: 32px;">
-                </button>
-                <button style="background-color: #247777; border-radius: 10%; border: solid 0.1px #dfdfdf; width: 32px; height: 32px; padding: 0;">
-                    <img src="./imagens/icons8-aplicação-telegrama-250.png" style="width: 28px;">
-                </button>
-            -->
-        <img
-          src="./imagens/icons8-f-do-facebook-240.png"
-          alt="f do facebook branco"
-          style="width: 28px"
-        />
-        <img
-          src="./imagens//icons8-instagram-256.png"
-          alt="logo do instagram"
-          style="width: 28px"
-        />
-        <img src="./imagens/icons8-twitter-256.png" style="width: 28px" />
-        <img
-          src="./imagens/icons8-reproduzir-youtube-256.png"
-          style="width: 28px"
-        />
-        <img
-          src="./imagens/icons8-aplicação-telegrama-250.png"
-          style="width: 24px"
-        />
-        <img src="./imagens/tik-tok.png" style="height: 20px" />
-      </div>
-    </div>
-
-    <!-- Barra biblioteca digital -->
-    <section
-      class="Barra Biblioteca Digital"
-      style="
-        height: 200px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: #fff;
-      "
-    >
-      <img
-        src="./imagens/logos/Marca Biblioteca Digital.jpg"
-        alt="logo semed"
-        style="height: 180px; margin-left: 5%"
-        onclick="window.location='https://biblioteca-cfpm-semed.manaus.am.gov.br/';"
-      />
-      <div
-        style="
-          height: 100%;
-          width: 70%;
-          background-image: url('./imagens/logos/Textura\ Transparente\ Prefeitura.png');
-          display: flex;
           justify-content: center;
-          align-items: center;
-        "
-      >
-      <!--antigo titulo-->
-      <!--
+        }
 
-        <h2
-          style="
-            color: #730d73;
-            font-size: 2.5em;
-            height: 100px;
-            width: 600px;
-            text-align: center;
-          "
-        >
-          BIBLIOTECAS ESCOLARES INTEGRADAS
+        .logo-instagram {
+          width: 32px;
+        }
+
+        .titulo-noticia {
+          color: #fff;
+          text-align: center;
+          font-size: 2em;
+        }
+
+        .span-quando {
+          text-align: center;
+          font-size: 1em;
+          font-weight: bold;
+        }
+
+        .span-onde {
+          text-align: center;
+          font-size: 1em;
+          font-weight: bold;
+        }
+
+        .paragrafo-noticia {
+          text-align: center;
+        }
+
+        .id-instagram{
+          font-size: 1.2em;
+          margin-left: 2px;
+          color: #fff;
+        }
+
+        .div-informacoes {
+          display: flex;
+          flex-direction: column;
+        }
+
+        @media screen and (max-width: 800px) {
+            .Noticia {
+                flex-direction: column;
+            }
+
+            .secao-instagram {
+                display: none;
+            }
+
+            .primeira-coluna {
+                width: 100%;
+                margin-bottom: 10px ;
+            }
+
+            .segunda-coluna {
+                width: 100%;
+            }
+
+            .terceira-coluna {
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .titulo-noticia {
+                font-size: 1.5em;
+            }
+
+            .paragrafo-noticia {
+                text-align: center;
+            }
+        }
+      </style>
+    <div class="primeira-coluna">
+        <h2 class="titulo-noticia">
+            Escola Municipal     jarlece Zaranza faz leitura teatro infantil
         </h2>
-      -->
-        <!--fim do antigo titulo-->
-        <h1 style="color: #730d73; text-align: center; font-size: 3.3em; font-weight: bolder;  width: 550px;">Bibliotecas <span class="txt-type" data-wait="2500" data-words='["Escolares Integradas.", "Escolares Municipais.", "Escolares onlines."]'></span><i class="fas fa-pencil-alt"></i></h1>
-      </div>
-    </section>
-
+        <div class="secao-instagram">
+            <img src="https://inovape-comunicacoes.github.io/projeto-koha/imagens//icons8-instagram-256.png" alt="logo instagram" class="logo-instagram" 
+            /> 
+            <a 
+                class="id-instagram" 
+                href="https://instagram.com"
+            > 
+                @Semed_Oficial 
+            </a>
+        </div>
+    </div>
+    <div class="segunda-coluna">
+        <p class="paragrafo-noticia">
+                "Ler &eacute;     legal a qualquer hora" foi o lema usado na produ&ccedil;&atilde;o teatral e no incentivo na forma&ccedil;&atilde;o dos leitores. As escolheram o livro e produziram a pe&ccedil;a com orienta&ccedil;&atilde;o do biblioec&aacute;rio e professores. Agora est&atilde;o convidado a comunidade para participarem da apresenta&ccedil;&atilde;o.
+        </p>
+        <div class="div-informacoes">
+            <span class="span-quando"> 
+                Quando: 23/06/2023 </span> 
+            <span class="span-onde">
+                Onde: Quadra da escola             
+            </span>
+        </div>
+    </div>
+    <div class="terceira-coluna">
+        <img 
+            src="https://www.canoas.rs.gov.br/ wp-content/uploads/2019/08/Pablo-Reis-30.jpg" alt="professora dando uma palestra" class="imagem-noticia" />
+    </div>
+</section>
+<!-- Fim das Noticias-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div id="wrapper">
-      <!--Menu de Navegação-->
-      <div id="header-region" class="noprint">
-        <nav class="navbar navbar-expand">
-          <!--<button id="scrolltocontent">Ir para o conteúdo principal</button>-->
-          <!-- Logo -->
-          <!-- 
-
-         <div id="logo">
-         <a class="navbar-brand" href="/cgi-bin/koha/opac-main.pl">
-          Koha online  </a>
-         </div>
-      -->
-
-          <div id="cartDetails" class="cart-message">Seu cesto está vazio.</div>
-
-          <ul id="cart-list-nav" class="navbar-nav">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#"
-                id="cartmenulink"
-                role="button"
-                title="Selecione os exemplares em que você tem interesse"
-              >
-                <i
-                  id="carticon"
-                  class="fa fa-shopping-cart fa-icon-black"
-                  aria-hidden="true"
-                  style="color: #730d73"
-                ></i>
-                <span class="cartlabel" style="color: #247777">Cestinha</span>
-                <span id="basketcount"></span>
-              </a>
-            </li>
-
-            <li class="divider-vertical"></li>
-
-            <li class="nav-item dropdown">
-              <a
-                aria-expanded="false"
-                aria-haspopup="true"
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                id="listsmenu"
-                role="button"
-                title="Exibir listas"
-                ><i
-                  class="fa fa-list fa-icon-black"
-                  aria-hidden="true"
-                  style="color: #730d73"
-                ></i>
-                <span class="listslabel" style="color: #247777">Listas</span>
-              </a>
-              <div
-                aria-labelledby="listsmenu"
-                role="menu"
-                class="dropdown-menu"
-              >
-                <a
-                  class="dropdown-item"
-                  href="/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=2"
-                  tabindex="-1"
-                  role="menuitem"
-                  ><strong>Listas públicas</strong></a
-                >
-
-                <a
-                  class="dropdown-item"
-                  href="/cgi-bin/koha/opac-shelves.pl?op=view&amp;shelfnumber=2&amp;sortfield=title"
-                  tabindex="-1"
-                  role="menuitem"
-                  >Titulo</a
-                >
-
-                <a
-                  class="dropdown-item"
-                  href="/cgi-bin/koha/opac-shelves.pl?op=view&amp;shelfnumber=19&amp;sortfield=title"
-                  tabindex="-1"
-                  role="menuitem"
-                  >Vicente de Paula</a
-                >
-
-                <a
-                  class="dropdown-item"
-                  href="/cgi-bin/koha/opac-shelves.pl?op=view&amp;shelfnumber=18&amp;sortfield=title"
-                  tabindex="-1"
-                  role="menuitem"
-                  >Os mais queridos</a
-                >
-
-                <a
-                  class="dropdown-item listmenulink"
-                  href="/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=2"
-                  tabindex="-1"
-                  role="menuitem"
-                  >Visualizar Tudo</a
-                >
-
-                <div class="dropdown-divider"></div>
-
-                <a
-                  class="dropdown-item"
-                  href="/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=1"
-                  tabindex="-1"
-                  role="menuitem"
-                  ><strong>Suas Listas</strong></a
-                >
-
-                <a
-                  class="dropdown-item"
-                  href="/cgi-bin/koha/opac-shelves.pl?op=add_form"
-                  tabindex="-1"
-                  role="menuitem"
-                  >Faça o login para criar suas próprias listas</a
-                >
-              </div>
-              <!-- / .dropdown-menu -->
-            </li>
-            <!-- / .nav-item.dropdown -->
-          </ul>
-          <!-- / .navbar-nav -->
-
-          <ul id="members" class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a
-                href="/cgi-bin/koha/opac-user.pl"
-                class="nav-link login-link loginModal-trigger"
-                ><i
-                  class="fa fa-user fa-icon-black fa-fw"
-                  aria-hidden="true"
-                  style="color: #730d73"
-                ></i>
-                <span class="userlabel" style="color: #247777"
-                  >Acesse sua conta</span
-                ></a
-              >
-            </li>
-
-            <li class="nav-item search_history">
-              <a
-                class="nav-link login-link"
-                href="/cgi-bin/koha/opac-search-history.pl"
-                title="Visualizar seu histórico de esquisa"
-                style="color: #247777"
-                >Histórico de pesquisa</a
-              >
-            </li>
-            <li class="divider-vertical"></li>
-            <li class="nav-item">
-              <a
-                class="nav-link logout clearsh"
-                href="/cgi-bin/koha/opac-search-history.pl?action=delete"
-                title="Excluir histórico de pesquisa"
-                ><i class="fa fa-trash" aria-hidden="true"></i> Limpar</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <!-- /navbar -->
-      </div>
-      <!-- / header-region -->
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <div id="opac-main-search">
-              <!--retirei a margem para ficar centralizado -->
-              <form
-                name="searchform"
-                method="get"
-                action="/cgi-bin/koha/opac-search.pl"
-                id="searchform"
-                style="margin: 0px"
-              >
-                <div class="form-row align-items-center">
-                  <div class="col-sm-auto order-1 order-sm-1">
-                    <label for="masthead_search" style="color: #fff">
-                      Pesquisar
-                    </label>
-                  </div>
-                  <div class="col-sm-auto order-2 order-sm-2">
-                    <select
-                      name="idx"
-                      id="masthead_search"
-                      class="form-control"
-                    >
-                      <option value="">Geral</option>
-
-                      <option value="ti">Título</option>
-
-                      <option value="au">Autor</option>
-
-                      <option value="su">Assunto</option>
-
-                      <option value="nb">ISBN</option>
-
-                      <option value="ns">ISSN</option>
-
-                      <option value="se">Séries</option>
-
-                      <option value="callnum">Classificação</option>
-                    </select>
-                  </div>
-                  <!-- /.col-sm-auto -->
-
-                  <div class="col order-4 order-sm-3">
-                    <input
-                      class="transl1 form-control"
-                      id="translControl1"
-                      name="q"
-                      title="Digite os termos de pesquisa"
-                      type="text"
-                    /><span id="translControl"></span>
-                  </div>
-                  <!-- /.col -->
-
-                  <div
-                    class="col-sm col-md-3 col-lg-2 order-3 order-sm-4"
-                    style="margin-right: 15px"
-                  >
-                    <select
-                      name="branch_group_limit"
-                      id="select_library"
-                      class="form-control"
-                      style="width: 100%"
-                    >
-                      <option value="">Todas as bibliotecas</option>
-
-                      <option value="branch:BCGH">
-                        Biblioteca Elson Bentes Farias
-                      </option>
-
-                      <option value="branch:BJCMM">
-                        Biblioteca Escola Municipal José Carlos Martins
-                        Mestrinho
-                      </option>
-
-                      <option value="branch:BPRVPM">
-                        Biblioteca Escola Prof. Regina Vitória Pires Muniz
-                      </option>
-
-                      <option value="branch:BESN">
-                        Biblioteca Escola Solange Nascimento
-                      </option>
-
-                      <option value="branch:BFF">Biblioteca Firme na Fé</option>
-
-                      <option value="branch:BSP">
-                        Biblioteca Joaquim da Silva Pinto
-                      </option>
-
-                      <option value="branch:BSMB">
-                        Biblioteca Loana Portela
-                      </option>
-
-                      <option value="branch:BMM">
-                        Biblioteca Madalena Maurício
-                      </option>
-
-                      <option value="branch:BMCS">
-                        Biblioteca Maria da Costa Souza - Escola Municipal
-                        Vicente Cruz
-                      </option>
-
-                      <option value="branch:BELBA10">
-                        Biblioteca Polo Luiz Bacellar
-                      </option>
-
-                      <option value="branch:BPA">
-                        Biblioteca Professor Adailton José Carvalho da Silva -
-                        DDPM
-                      </option>
-
-                      <option value="branch:BPDSC">
-                        Biblioteca Professor Deusdeth Simões Coelho - EM.
-                        Professor Joaquim Gonzaga Pinheiro
-                      </option>
-
-                      <option value="branch:BPENO">
-                        Biblioteca Professor Erivonaldo Nunes de Oliveira -
-                        Escola Municipal Rodolpho Valle
-                      </option>
-
-                      <option value="branch:BPAV">
-                        Biblioteca Professora Antônia Valério
-                      </option>
-
-                      <option value="branch:BJCZ">
-                        Biblioteca Professora Jarlece Zaranza
-                      </option>
-
-                      <option value="branch:BPMCM">
-                        Biblioteca Professora Maria Cezarina do Monte
-                      </option>
-
-                      <option value="branch:BPMR">
-                        Biblioteca Professora Maria Raimunda - Escola Municipal
-                        Professor Alberto Makarem
-                      </option>
-
-                      <option value="branch:epbmz">
-                        Biblioteca Professora Maria Zita
-                      </option>
-
-                      <option value="branch:BPMZ">
-                        Biblioteca Professora Maria Zita - Escola Municipal
-                        Professora Elizabeth Beltrão
-                      </option>
-
-                      <option value="branch:PMMR">
-                        Biblioteca Professora Mariles Marques dos Reis
-                      </option>
-
-                      <option value="branch:EMPS">
-                        Escola Mun. Professora Sulamita Pereira Gonçalves
-                      </option>
-
-                      <option value="branch:BEL">
-                        Escola Mun. São Vicente de Paula - Biblioteca Eliana
-                        Lúcia
-                      </option>
-
-                      <option value="branch:BELC">
-                        Escola Municipal Loris Cordovil - Biblioteca Loris
-                        Cordovil
-                      </option>
-
-                      <option value="branch:EMMCRS">
-                        Escola Municipal Maria do Carmo Rebello de Souza:
-                        Biblioteca Escolar Adriana Barbosa
-                      </option>
-
-                      <option value="branch:BVP">
-                        Escola Municipal Vicente de Paula - Biblioteca Profa
-                        Oscarina de Araujo Falcão
-                      </option>
-                    </select>
-                    <!-- /#select_library -->
-                  </div>
-                  <!-- /.col-sm-auto -->
-                  <div
-                    class="col-sm-auto order-5"
-                    style="
-                      background-color: #730d73;
-                      border-radius: 0.25rem;
-                      margin-left: 10px;
-                    "
-                  >
-                    <button
-                      type="submit"
-                      id="searchsubmit"
-                      class="btn btn-primary"
-                      style="background: #730d73; border: none"
-                    >
-                      Buscar
-                    </button>
-                  </div>
-                </div>
-                <!-- /.form-row -->
-                <input type="hidden" name="weight_search" value="1" />
-              </form>
+     <div id="header-region" class="noprint">
+     <nav class="navbar navbar-expand">
+     <button id="scrolltocontent">Ir para o conteúdo principal</button>
+     <div id="logo">
+     <a class="navbar-brand" href="/cgi-bin/koha/opac-main.pl">
+      Koha online  </a>
+     </div>
+     
+     <div id="cartDetails" class="cart-message">Seu cesto está vazio.</div>
+     
+     <ul id="cart-list-nav" class="navbar-nav">
+     
+     <li class="nav-item">
+     <a class="nav-link" href="#" id="cartmenulink" role="button" title="Selecione os exemplares em que você tem interesse">
+     <i id="carticon" class="fa fa-shopping-cart fa-icon-black" aria-hidden="true"></i> <span class="cartlabel">Carrinho</span> <span id="basketcount"></span>
+     </a>
+     </li>
+     
+     <li class="divider-vertical"></li>
+     
+     <li class="nav-item dropdown">
+     <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="listsmenu" role="button" title="Exibir listas"><i class="fa fa-list fa-icon-black" aria-hidden="true"></i> <span class="listslabel">Listas</span>
+     </a>
+     <div aria-labelledby="listsmenu" role="menu" class="dropdown-menu">
+     
+     <a class="dropdown-item" href="/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=2" tabindex="-1" role="menuitem"><strong>Listas públicas</strong></a>
+     
+     
+     <a class="dropdown-item" href="/cgi-bin/koha/opac-shelves.pl?op=view&amp;shelfnumber=2&amp;sortfield=title" tabindex="-1" role="menuitem">Titulo</a>
+     
+     
+     
+     <a class="dropdown-item" href="/cgi-bin/koha/opac-shelves.pl?op=view&amp;shelfnumber=19&amp;sortfield=title" tabindex="-1" role="menuitem">Vicente de Paula</a>
+     
+     
+     
+     <a class="dropdown-item" href="/cgi-bin/koha/opac-shelves.pl?op=view&amp;shelfnumber=18&amp;sortfield=title" tabindex="-1" role="menuitem">Os mais queridos</a>
+     
+     
+     
+     
+     <a class="dropdown-item listmenulink" href="/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=2" tabindex="-1" role="menuitem">Visualizar Tudo</a>
+     
+     
+     
+     <div class="dropdown-divider"></div>
+     
+     
+     <a class="dropdown-item" href="/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=1" tabindex="-1" role="menuitem"><strong>Suas Listas</strong></a>
+     
+     <a class="dropdown-item" href="/cgi-bin/koha/opac-shelves.pl?op=add_form" tabindex="-1" role="menuitem">Faça o login para criar suas próprias listas</a>
+     
+     
+     </div> <!-- / .dropdown-menu -->
+     </li> <!-- / .nav-item.dropdown -->
+     
+     </ul> <!-- / .navbar-nav -->
+    
+     
+     
+     <ul id="members" class="navbar-nav">
+     <li class="nav-item dropdown">
+     
+     
+     
+     <a href="/cgi-bin/koha/opac-user.pl" class="nav-link login-link loginModal-trigger"><i class="fa fa-user fa-icon-black fa-fw" aria-hidden="true"></i> <span class="userlabel">Acesse sua conta</span></a>
+     
+     
+     
+    
+     
+     </li>
+     
+     
+     <li class="nav-item search_history">
+     <a class="nav-link login-link" href="/cgi-bin/koha/opac-search-history.pl" title="Visualizar seu histórico de esquisa">Histórico de pesquisa</a>
+     </li>
+     <li class="divider-vertical"></li>
+     <li class="nav-item">
+     <a class="nav-link logout clearsh" href="/cgi-bin/koha/opac-search-history.pl?action=delete" title="Excluir histórico de pesquisa"><i class="fa fa-trash" aria-hidden="true"></i> Limpar</a>
+     </li>
+     
+     
+     </ul>
+     
+     </nav> <!-- /navbar -->
+    
+     
+    
+     </div> <!-- / header-region -->
+    
+     
+     <div class="container-fluid">
+     
+     <div class="row">
+     <div class="col">
+     <div id="opac-main-search">
+     
+     <form name="searchform" method="get" action="/cgi-bin/koha/opac-search.pl" id="searchform">
+     <div class="form-row align-items-center">
+     <div class="col-sm-auto order-1 order-sm-1">
+     <label for="masthead_search"> Pesquisar  </label>
+     </div>
+     <div class="col-sm-auto order-2 order-sm-2">
+     <select name="idx" id="masthead_search" class="form-control">
+     
+     <option value="">Geral</option>
+     
+     
+     <option value="ti">Título</option>
+     
+     
+     <option value="au">Autor</option>
+     
+     
+     <option value="su">Assunto</option>
+     
+     
+     <option value="nb">ISBN</option>
+     
+     
+     <option value="ns">ISSN</option>
+     
+     
+     <option value="se">Séries</option>
+     
+     
+     
+     <option value="callnum">Classificação</option>
+     
+     
+     </select>
+     </div> <!-- /.col-sm-auto -->
+    
+     <div class="col order-4 order-sm-3">
+     
+     <input class="transl1 form-control" id="translControl1" name="q" title="Digite os termos de pesquisa" type="text"><span id="translControl"></span>
+     
+     </div> <!-- /.col -->
+    
+     
+     <div class="col-sm col-md-3 col-lg-2 order-3 order-sm-4">
+     <select name="branch_group_limit" id="select_library" class="form-control">
+     <option value="">Todas as bibliotecas</option>
+    
+     
+    
+     
+     
+     <option value="branch:BCGH">Biblioteca Elson Bentes Farias</option>
+     
+     
+     
+     <option value="branch:BJCMM">Biblioteca Escola Municipal José Carlos Martins Mestrinho</option>
+     
+     
+     
+     <option value="branch:BPRVPM">Biblioteca Escola Prof. Regina Vitória Pires Muniz</option>
+     
+     
+     
+     <option value="branch:BESN">Biblioteca Escola Solange Nascimento</option>
+     
+     
+     
+     <option value="branch:BFF">Biblioteca Firme na Fé</option>
+     
+     
+     
+     <option value="branch:BSP">Biblioteca Joaquim da Silva Pinto </option>
+     
+     
+     
+     <option value="branch:BSMB">Biblioteca Loana Portela</option>
+     
+     
+     
+     <option value="branch:BMM">Biblioteca Madalena Maurício</option>
+     
+     
+     
+     <option value="branch:BMCS">Biblioteca Maria da Costa Souza - Escola Municipal Vicente Cruz</option>
+     
+     
+     
+     <option value="branch:BELBA10">Biblioteca Polo Luiz Bacellar</option>
+     
+     
+     
+     <option value="branch:BPA">Biblioteca Professor Adailton José Carvalho da Silva - DDPM</option>
+     
+     
+     
+     <option value="branch:BPDSC">Biblioteca Professor Deusdeth Simões Coelho - EM. Professor Joaquim Gonzaga Pinheiro</option>
+     
+     
+     
+     <option value="branch:BPENO">Biblioteca Professor Erivonaldo Nunes de Oliveira - Escola Municipal Rodolpho Valle</option>
+     
+     
+     
+     <option value="branch:BPAV">Biblioteca Professora Antônia Valério</option>
+     
+     
+     
+     <option value="branch:BJCZ">Biblioteca Professora Jarlece Zaranza</option>
+     
+     
+     
+     <option value="branch:BPMCM">Biblioteca Professora Maria Cezarina do Monte</option>
+     
+     
+     
+     <option value="branch:BPMR">Biblioteca Professora Maria Raimunda - Escola Municipal Professor Alberto Makarem</option>
+     
+     
+     
+     <option value="branch:epbmz">Biblioteca Professora Maria Zita</option>
+     
+     
+     
+     <option value="branch:BPMZ">Biblioteca Professora Maria Zita - Escola Municipal Professora Elizabeth Beltrão</option>
+     
+     
+     
+     <option value="branch:PMMR">Biblioteca Professora Mariles Marques dos Reis</option>
+     
+     
+     
+     <option value="branch:EMPS">Escola Mun. Professora Sulamita Pereira Gonçalves</option>
+     
+     
+     
+     <option value="branch:BEL">Escola Mun. São Vicente de Paula - Biblioteca Eliana Lúcia</option>
+     
+     
+     
+     <option value="branch:BELC">Escola Municipal Loris Cordovil - Biblioteca Loris Cordovil</option>
+     
+     
+     
+     <option value="branch:EMMCRS">Escola Municipal Maria do Carmo Rebello de Souza: Biblioteca Escolar Adriana Barbosa</option>
+     
+     
+     
+     <option value="branch:BVP">Escola Municipal Vicente de Paula - Biblioteca Profa Oscarina de Araujo Falcão</option>
+     
+     
+    
+     
+     </select> <!-- /#select_library -->
+     </div> <!-- /.col-sm-auto -->
+     <div class="col-sm-auto order-5">
+     <button type="submit" id="searchsubmit" class="btn btn-primary">Buscar</button>
+     </div>
+     
+     </div> <!-- /.form-row -->
+     <input type="hidden" name="weight_search" value="1">
+     </form>
+     
+     </div><!-- /#opac-main-search -->
+     </div> <!-- /.col -->
+     </div> <!-- /.row -->
+     
+    
+     <div class="row">
+     <ul class="nav" id="moresearches">
+     <li class="nav-item">
+     <a href="/cgi-bin/koha/opac-search.pl">Pesquisa avançada</a>
+     </li>
+     
+     
+     
+     <li class="nav-item">
+     <a href="/cgi-bin/koha/opac-authorities-home.pl">Pesquisa de autoridade</a>
+     </li>
+     
+     
+     
+     <li class="nav-item">
+     <a href="/cgi-bin/koha/opac-tags.pl">Nuvem de tags</a>
+     </li>
+     
+     
+     <li class="nav-item">
+     <a href="/cgi-bin/koha/opac-tags_subject.pl">Nuvem de assuntos</a>
+     </li>
+     
+     
+     <li class="nav-item">
+     <a href="/cgi-bin/koha/opac-topissues.pl">Mais popular</a>
+     </li>
+     
+     
+     
+     
+     
+     <li class="nav-item">
+     <a id="library_page" href="/cgi-bin/koha/opac-library.pl">
+      Bibliotecas  </a>
+     </li>
+     
+     </ul> <!-- /.nav#moresearches -->
+     </div> <!-- /.row -->
+     </div> <!-- /.container-fluid -->
+     
+    
+     <!-- Login form hidden by default, used for modal window -->
+     <div id="loginModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+     <div class="modal-dialog">
+     <div class="modal-content">
+     <div class="modal-header">
+     <h2 class="modal-title" id="modalLoginLabel">Acesse sua conta</h2>
+     <button aria-label="Fechar" class="closebtn" data-dismiss="modal" type="button">
+     <span aria-hidden="true">×</span>
+     </button>
+     </div>
+     <form action="/cgi-bin/koha/opac-user.pl" method="post" name="auth" id="modalAuth">
+     <input type="hidden" name="has-search-query" id="has-search-query" value="">
+     <div class="modal-body">
+     
+     
+     <input type="hidden" name="koha_login_context" value="opac">
+     <fieldset class="brief">
+     <label for="muserid">Login:</label><input type="text" id="muserid" name="userid">
+     <label for="mpassword">Senha:</label><input type="password" id="mpassword" name="password">
+     
+     
+     
+     </fieldset>
+     
+     </div>
+     
+     <div class="modal-footer">
+     <input class="btn btn-primary" type="submit" value="Login">
+     </div>
+     
+     </form> <!-- /#auth -->
+     </div> <!-- /.modal-content -->
+     </div> <!-- /.modal-dialog -->
+     </div> <!-- /#modalAuth -->
+    
+    
+    <div class="main">
+     <nav aria-label="Área de seleção">
+     <ul class="breadcrumb">
+     
+     <li class="breadcrumb-item active" aria-current="page">
+     <a href="/cgi-bin/koha/opac-main.pl">Início</a>
+     </li>
+     
+     </ul>
+     </nav>
+    
+     
+     
+     <div id="notloggedin" class="container-fluid">
+     
+     
+    
+     <div class="row">
+     
+    
+     
+     
+     <div class="col-12 col-lg-9 order-md-1 maincontent">
+     
+    
+     <h1 class="sr-only">Koha home</h1>
+    
+     
+    
+      <!-- koha news -->
+     
+    
+     
+    
+     
+     
+    
+     
+     <div id="opacmainuserblock">
+     
+     
+     <div id="OpacMainUserBlock">
+     
+     <div class="OpacMainUserBlock_pt-BR_item">
+     
+     <div class="OpacMainUserBlock_pt-BR_body">
+    <!-- Debut du carrousel --><!-- Carrousel 4.0.4 -->
+    <meta charset="utf-8">
+    
+    <div id="inlibro-carrousel">
+    
+        
+            <div id="carrousel-0" class="slider">
+                <h2>Os livros mais lidos, sucessos entre os jovens!</h2>
+                <hr>
+                
+                    <div id="Os livros mais lidos, sucessos entre os jovens!">
+                        <div class="images" style="left: 0px;">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                <a href="/cgi-bin/koha/opac-detail.pl?biblionumber=682">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=682" title="No fundo de doze histórias corre um Rio" alt="No fundo de doze histórias corre um Rio">
+                                </a>
+                            
+                                <a href="/cgi-bin/koha/opac-detail.pl?biblionumber=608">
+                                    <img class="cloudcarousel" src="https://images-na.ssl-images-amazon.com/images/P/8566428323.01.MZZZZZZZ.jpg" title="Os caras malvados" alt="Os caras malvados">
+                                </a>
+                            
+                                <a href="/cgi-bin/koha/opac-detail.pl?biblionumber=586">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=586" title="A sorveteria" alt="A sorveteria">
+                                </a>
+                            
+                                <a href="/cgi-bin/koha/opac-detail.pl?biblionumber=469">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=469" title="Alice no país da mentira" alt="Alice no país da mentira">
+                                </a>
+                            
+                                <a href="/cgi-bin/koha/opac-detail.pl?biblionumber=479">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=479" title="Mitos gregos" alt="Mitos gregos">
+                                </a>
+                            
+                        <a href="/cgi-bin/koha/opac-detail.pl?biblionumber=846">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=846" title="O barqueiro e o canoeiro" alt="O barqueiro e o canoeiro">
+                                </a><a href="/cgi-bin/koha/opac-detail.pl?biblionumber=986">
+                                    <img class="cloudcarousel" src="https://images-na.ssl-images-amazon.com/images/P/853424832X.01.MZZZZZZZ.jpg" title="Oxente!" alt="Oxente!">
+                                </a><a href="/cgi-bin/koha/opac-detail.pl?biblionumber=1067">
+                                    <img class="cloudcarousel" src="https://images-na.ssl-images-amazon.com/images/P/859323402X.01.MZZZZZZZ.jpg" title="Se os tubarões fossem homens" alt="Se os tubarões fossem homens">
+                                </a><a href="/cgi-bin/koha/opac-detail.pl?biblionumber=953">
+                                    <img class="cloudcarousel" src="https://images-na.ssl-images-amazon.com/images/P/8545400837.01.MZZZZZZZ.jpg" title="Contos africanos" alt="Contos africanos">
+                                </a><a href="/cgi-bin/koha/opac-detail.pl?biblionumber=944">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=944" title="Heróis e suas jornadas" alt="Heróis e suas jornadas">
+                                </a><a href="/cgi-bin/koha/opac-detail.pl?biblionumber=814">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=814" title="Revista de história da Biblioteca Nacional." alt="Revista de história da Biblioteca Nacional.">
+                                </a><a href="/cgi-bin/koha/opac-detail.pl?biblionumber=725">
+                                    <img class="cloudcarousel" src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=725" title="Toco de menino" alt="Toco de menino">
+                                </a></div>
+                    </div>
+                    <div class="controls">
+                        <button class="Os livros mais lidos, sucessos entre os jovens!" style="float:left" onclick="Right(this)" type="button">&lt;</button>
+                        <button class="Os livros mais lidos, sucessos entre os jovens!" style="float:right" onclick="Left(this)" type="button">&gt;</button>
+                    </div>
+                
             </div>
-            <!-- /#opac-main-search -->
-          </div>
-          <!-- /.col -->
+        
+    
+    </div>
+    
+    <style>
+    
+    
+    
+    #inlibro-carrousel .carrouselFrame {
+        background: #DDDDDD;
+        border-radius: 8px;
+        margin: 1em 0;
+        overflow: hidden;
+        padding: 1em 0;
+        position: relative;
+    }
+    
+    #inlibro-carrousel .carrousel{
+        height : 300px;
+    }
+    
+    #inlibro-carrousel .loadingDiv{
+        background : white;
+        position : absolute;
+        height : 100%;
+        width : 100%;
+        z-index : 2000;
+        top : 0;
+    
+    }
+    
+     /*De bootstrap pour le carrousel*/
+      
+    .carousel {
+        position: relative;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+    
+    .carousel-inner {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .carousel-inner>.item {
+        display: none;
+        position: relative;
+        -webkit-transition: 0.6s ease-in-out left;
+        -moz-transition: 0.6s ease-in-out left;
+        -o-transition: 0.6s ease-in-out left;
+        transition: 0.6s ease-in-out left;
+    }
+    
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        display: block;
+        line-height: 1;
+    }
+    
+    .carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev {
+        display: block;
+    }
+    
+    .carousel-inner>.active {
+        left: 0;
+    }
+    
+    .carousel-inner>.next, .carousel-inner>.prev {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .carousel-inner>.next {
+        left: 100%;
+    }
+    
+    .carousel-inner>.prev {
+        left: -100%;
+    }
+    
+    .carousel-inner>.next.left, .carousel-inner>.prev.right {
+        left: 0;
+    }
+    
+    .carousel-inner>.active.left {
+        left: -100%;
+    }
+    
+    .carousel-inner>.active.right {
+        left: 100%;
+    }
+    
+    .carousel-control {
+        position: absolute;
+        top: 40%;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        font-size: 60px;
+        font-weight: 100;
+        line-height: 30px;
+        color: #ffffff;
+        text-align: center;
+        background: #222222;
+        border: 3px solid #ffffff;
+        -webkit-border-radius: 23px;
+        -moz-border-radius: 23px;
+        border-radius: 23px;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+    }
+    
+    .carousel-control.right {
+        left: auto;
+        right: 15px;
+    }
+    
+    .carousel-control:hover, .carousel-control:focus {
+        color: #ffffff;
+        text-decoration: none;
+        opacity: 0.9;
+        filter: alpha(opacity=90);
+    }
+    
+    .carousel-indicators {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 5;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .carousel-indicators li {<!-- Noticias -->
+<section class="Noticia">
+    <style>
+        .Noticia {
+          display: flex;
+          flex-direction: row;
+          background-color: #730d73;
+          padding: 20px 10px;
+          color: #fff;
+          justify-content: space-evenly;
+          margin: 6px;
+        }
+
+        .primeira-coluna {
+          display: flex;
+          flex-direction: column;
+          width: 28%;
+          justify-content: space-around;
+          margin: 0 15px 0 5px;
+        }
+
+        .segunda-coluna {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 38%;
+          padding: 0 5%;
+        }
+
+        .terceira-coluna {
+          display: flex;
+          flex-direction: column;
+          width: 34%;
+        }
+
+        .imagem-noticia {
+          width: 95%;
+          margin: auto;
+        }
+
+        .secao-instagram {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .logo-instagram {
+          width: 32px;
+        }
+
+        .titulo-noticia {
+          color: #fff;
+          text-align: center;
+          font-size: 2em;
+        }
+
+        .span-quando {
+          text-align: center;
+          font-size: 1em;
+          font-weight: bold;
+        }
+
+        .span-onde {
+          text-align: center;
+          font-size: 1em;
+          font-weight: bold;
+        }
+
+        .paragrafo-noticia {
+          text-align: center;
+        }
+
+        .id-instagram{
+          font-size: 1.2em;
+          margin-left: 2px;
+          color: #fff;
+        }
+
+        .div-informacoes {
+          display: flex;
+          flex-direction: column;
+        }
+
+        @media screen and (max-width: 800px) {
+            .Noticia {
+                flex-direction: column;
+            }
+
+            .secao-instagram {
+                display: none;
+            }
+
+            .primeira-coluna {
+                width: 100%;
+                margin-bottom: 10px ;
+            }
+
+            .segunda-coluna {
+                width: 100%;
+            }
+
+            .terceira-coluna {
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .titulo-noticia {
+                font-size: 1.5em;
+            }
+
+            .paragrafo-noticia {
+                text-align: center;
+            }
+        }
+      </style>
+    <div class="primeira-coluna">
+        <h2 class="titulo-noticia">
+            Escola Municipal     jarlece Zaranza faz leitura teatro infantil
+        </h2>
+        <div class="secao-instagram">
+            <img src="https://inovape-comunicacoes.github.io/projeto-koha/imagens//icons8-instagram-256.png" alt="logo instagram" class="logo-instagram" 
+            /> 
+            <a 
+                class="id-instagram" 
+                href="https://instagram.com"
+            > 
+                @Semed_Oficial 
+            </a>
         </div>
-        <!-- /.row -->
-
-        <div class="row" style="justify-content: center">
-          <ul
-            class="teste"
-            id="moresearches"
-            style="
-              padding: 0px;
-              margin: 10px 0px;
-              width: 97%;
-              display: flex;
-              justify-content: center;
-            "
-          >
-            <li
-              style="border-color: #730d73; text-decoration: none"
-              class="nav-item"
-            >
-              <a
-                href="/cgi-bin/koha/opac-search.pl"
-                style="border-color: #730d73; color: #2faaff; font-size: 1.1em"
-                >Pesquisa avançada</a
-              >
-            </li>
-
-            <li class="teste">
-              <a
-                href="/cgi-bin/koha/opac-authorities-home.pl"
-                style="color: #2faaff; font-size: 1.1em"
-                >Pesquisa de autoridade</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                href="/cgi-bin/koha/opac-tags.pl"
-                style="color: #2faaff; font-size: 1.1em"
-                >Nuvem de tags</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                href="/cgi-bin/koha/opac-tags_subject.pl"
-                style="color: #2faaff; font-size: 1.1em"
-                >Nuvem de assuntos</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                href="/cgi-bin/koha/opac-topissues.pl"
-                style="color: #2faaff; font-size: 1.1em"
-                >Mais popular</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                id="library_page"
-                href="/cgi-bin/koha/opac-library.pl"
-                style="color: #2faaff; font-size: 1.1em"
-              >
-                Bibliotecas
-              </a>
-            </li>
-          </ul>
-          <!-- /.nav#moresearches -->
+    </div>
+    <div class="segunda-coluna">
+        <p class="paragrafo-noticia">
+                "Ler &eacute;     legal a qualquer hora" foi o lema usado na produ&ccedil;&atilde;o teatral e no incentivo na forma&ccedil;&atilde;o dos leitores. As escolheram o livro e produziram a pe&ccedil;a com orienta&ccedil;&atilde;o do biblioec&aacute;rio e professores. Agora est&atilde;o convidado a comunidade para participarem da apresenta&ccedil;&atilde;o.
+        </p>
+        <div class="div-informacoes">
+            <span class="span-quando"> 
+                Quando: 23/06/2023 </span> 
+            <span class="span-onde">
+                Onde: Quadra da escola             
+            </span>
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-
-      <!-- Login form hidden by default, used for modal window -->
-      <div
-        id="loginModal"
-        class="modal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="modalLoginLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title" id="modalLoginLabel">Acesse sua conta</h2>
-              <button
-                aria-label="Fechar"
-                class="closebtn"
-                data-dismiss="modal"
-                type="button"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <form
-              action="/cgi-bin/koha/opac-user.pl"
-              method="post"
-              name="auth"
-              id="modalAuth"
-            >
-              <input
-                type="hidden"
-                name="has-search-query"
-                id="has-search-query"
-                value=""
-              />
-              <div class="modal-body">
-                <input type="hidden" name="koha_login_context" value="opac" />
-                <fieldset class="brief">
-                  <label for="muserid">Login:</label
-                  ><input type="text" id="muserid" name="userid" />
-                  <label for="mpassword">Senha:</label
-                  ><input type="password" id="mpassword" name="password" />
-                </fieldset>
-              </div>
-
-              <div class="modal-footer">
-                <input class="btn btn-primary" type="submit" value="Login" />
-              </div>
-            </form>
-            <!-- /#auth -->
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /#modalAuth -->
-
-      <div class="main" style="padding-top: 0px">
-        <nav aria-label="Área de seleção">
-          <ul
-            class="breadcrumb"
-            style="background-color: #63d4d3; margin: 0px 0px 20px 0"
-          >
-            <li class="breadcrumb-item active" aria-current="page">
-              <a
-                href="/cgi-bin/koha/opac-main.pl"
-                style="color: #fff; font-weight: 600"
-                >Início</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <div id="notloggedin" class="container-fluid">
-          <div class="row">
-            <div class="col-12 col-lg-9 order-md-1 maincontent">
-              <h1 class="sr-only">Koha home</h1>
-
-              <!-- koha news -->
-
-              <div id="opacmainuserblock">
-                <div id="OpacMainUserBlock">
-                  <div class="OpacMainUserBlock_pt-BR_item">
-                    <div class="OpacMainUserBlock_pt-BR_body">
-                      <!-- Debut du carrousel --><!-- Carrousel 4.0.4 -->
-                      <meta charset="utf-8" />
-
-                      <div id="inlibro-carrousel">
-                        <div id="carrousel-0" class="slider">
-                          <h2 style="color: #25a2a2">
-                            Os livros mais lidos, sucessos entre os jovens!
-                          </h2>
-                          <hr />
-
-                          <div
-                            id="Os livros mais lidos, sucessos entre os jovens!"
-                          >
-                            <div class="images" style="left: 0px">
-                              <a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=682"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=682"
-                                  title="No fundo de doze histórias corre um Rio"
-                                  alt="No fundo de doze histórias corre um Rio"
-                                />
-                              </a>
-
-                              <a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=608"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="https://images-na.ssl-images-amazon.com/images/P/8566428323.01.MZZZZZZZ.jpg"
-                                  title="Os caras malvados"
-                                  alt="Os caras malvados"
-                                />
-                              </a>
-
-                              <a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=586"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=586"
-                                  title="A sorveteria"
-                                  alt="A sorveteria"
-                                />
-                              </a>
-
-                              <a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=469"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=469"
-                                  title="Alice no país da mentira"
-                                  alt="Alice no país da mentira"
-                                />
-                              </a>
-
-                              <a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=479"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=479"
-                                  title="Mitos gregos"
-                                  alt="Mitos gregos"
-                                />
-                              </a>
-
-                              <a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=846"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=846"
-                                  title="O barqueiro e o canoeiro"
-                                  alt="O barqueiro e o canoeiro"
-                                /> </a
-                              ><a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=986"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="https://images-na.ssl-images-amazon.com/images/P/853424832X.01.MZZZZZZZ.jpg"
-                                  title="Oxente!"
-                                  alt="Oxente!"
-                                /> </a
-                              ><a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=1067"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="https://images-na.ssl-images-amazon.com/images/P/859323402X.01.MZZZZZZZ.jpg"
-                                  title="Se os tubarões fossem homens"
-                                  alt="Se os tubarões fossem homens"
-                                /> </a
-                              ><a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=953"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="https://images-na.ssl-images-amazon.com/images/P/8545400837.01.MZZZZZZZ.jpg"
-                                  title="Contos africanos"
-                                  alt="Contos africanos"
-                                /> </a
-                              ><a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=944"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=944"
-                                  title="Heróis e suas jornadas"
-                                  alt="Heróis e suas jornadas"
-                                /> </a
-                              ><a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=814"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=814"
-                                  title="Revista de história da Biblioteca Nacional."
-                                  alt="Revista de história da Biblioteca Nacional."
-                                /> </a
-                              ><a
-                                href="/cgi-bin/koha/opac-detail.pl?biblionumber=725"
-                              >
-                                <img
-                                  class="cloudcarousel"
-                                  src="/cgi-bin/koha/opac-image.pl?thumbnail=1&amp;biblionumber=725"
-                                  title="Toco de menino"
-                                  alt="Toco de menino"
-                                />
-                              </a>
-                            </div>
-                          </div>
-                          <div class="controls">
-                            <button
-                              class="Os livros mais lidos, sucessos entre os jovens!"
-                              style="
-                                float: left;
-                                color: #25a2a2;
-                                font-weight: bolder;
-                              "
-                              onclick="Right(this)"
-                              type="button"
-                            >
-                              &lt;
-                            </button>
-                            <button
-                              class="Os livros mais lidos, sucessos entre os jovens!"
-                              style="
-                                float: right;
-                                color: #25a2a2;
-                                font-weight: bolder;
-                              "
-                              onclick="Left(this)"
-                              type="button"
-                            >
-                              &gt;
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <style>
-                        #inlibro-carrousel .carrouselFrame {
-                          background: #dddddd;
-                          border-radius: 8px;
-                          margin: 1em 0;
-                          overflow: hidden;
-                          padding: 1em 0;
-                          position: relative;
-                        }
-
-                        #inlibro-carrousel .carrousel {
-                          height: 300px;
-                        }
-
-                        #inlibro-carrousel .loadingDiv {
-                          background: white;
-                          position: absolute;
-                          height: 100%;
-                          width: 100%;
-                          z-index: 2000;
-                          top: 0;
-                        }
-
-                        /*De bootstrap pour le carrousel*/
-
-                        .carousel {
-                          position: relative;
-                          margin-bottom: 20px;
-                          line-height: 1;
-                        }
-
-                        .carousel-inner {
-                          overflow: hidden;
-                          width: 100%;
-                          position: relative;
-                        }
-
-                        .carousel-inner > .item {
-                          display: none;
-                          position: relative;
-                          -webkit-transition: 0.6s ease-in-out left;
-                          -moz-transition: 0.6s ease-in-out left;
-                          -o-transition: 0.6s ease-in-out left;
-                          transition: 0.6s ease-in-out left;
-                        }
-
-                        .carousel-inner > .item > img,
-                        .carousel-inner > .item > a > img {
-                          display: block;
-                          line-height: 1;
-                        }
-
-                        .carousel-inner > .active,
-                        .carousel-inner > .next,
-                        .carousel-inner > .prev {
-                          display: block;
-                        }
-
-                        .carousel-inner > .active {
-                          left: 0;
-                        }
-
-                        .carousel-inner > .next,
-                        .carousel-inner > .prev {
-                          position: absolute;
-                          top: 0;
-                          width: 100%;
-                        }
-
-                        .carousel-inner > .next {
-                          left: 100%;
-                        }
-
-                        .carousel-inner > .prev {
-                          left: -100%;
-                        }
-
-                        .carousel-inner > .next.left,
-                        .carousel-inner > .prev.right {
-                          left: 0;
-                        }
-
-                        .carousel-inner > .active.left {
-                          left: -100%;
-                        }
-
-                        .carousel-inner > .active.right {
-                          left: 100%;
-                        }
-
-                        .carousel-control {
-                          position: absolute;
-                          top: 40%;
-                          left: 15px;
-                          width: 40px;
-                          height: 40px;
-                          margin-top: -20px;
-                          font-size: 60px;
-                          font-weight: 100;
-                          line-height: 30px;
-                          color: #ffffff;
-                          text-align: center;
-                          background: #222222;
-                          border: 3px solid #ffffff;
-                          -webkit-border-radius: 23px;
-                          -moz-border-radius: 23px;
-                          border-radius: 23px;
-                          opacity: 0.5;
-                          filter: alpha(opacity=50);
-                        }
-
-                        .carousel-control.right {
-                          left: auto;
-                          right: 15px;
-                        }
-
-                        .carousel-control:hover,
-                        .carousel-control:focus {
-                          color: #ffffff;
-                          text-decoration: none;
-                          opacity: 0.9;
-                          filter: alpha(opacity=90);
-                        }
-
-                        .carousel-indicators {
-                          position: absolute;
-                          top: 15px;
-                          right: 15px;
-                          z-index: 5;
-                          margin: 0;
-                          list-style: none;
-                        }
-
-                        .carousel-indicators li {
-                          display: block;
-                          float: left;
-                          width: 10px;
-                          height: 10px;
-                          margin-left: 5px;
-                          text-indent: -999px;
-                          background-color: #ccc;
-                          background-color: rgba(255, 255, 255, 0.25);
-                          border-radius: 5px;
-                        }
-
-                        .carousel-indicators .active {
-                          background-color: #fff;
-                        }
-
-                        .carousel-caption {
-                          position: absolute;
-                          left: 0;
-                          right: 0;
-                          bottom: 0;
-                          padding: 15px;
-                          background: #333333;
-                          background: rgba(0, 0, 0, 0.75);
-                        }
-
-                        .carousel-caption h4,
-                        .carousel-caption p {
-                          color: #ffffff;
-                          line-height: 20px;
-                        }
-
-                        .carousel-caption h4 {
-                          margin: 0 0 5px;
-                        }
-
-                        .carousel-caption p {
-                          margin-bottom: 0;
-                        }
-
-                        /*De bootstrap pour le carrousel FIN*/
-
-                        #inlibro-carrousel .carousel-caption .title-text {
-                          color: #000000;
-                        }
-
-                        #inlibro-carrousel .carousel-control,
-                        #inlibro-carrousel .carousel-caption {
-                          background-color: #ffffff;
-                          z-index: 1000;
-                          cursor: pointer;
-                        }
-
-                        #inlibro-carrousel .carousel-caption {
-                          font-weight: bold;
-                          position: absolute;
-                          left: 0;
-                          right: 0;
-                        }
-
-                        #inlibro-carrousel .carousel-control,
-                        #inlibro-carrousel .carousel-caption {
-                          background-color: #ffffff;
-                          z-index: 1000;
-                        }
-
-                        #inlibro-carrousel .carousel-caption {
-                          font-weight: bold;
-                        }
-
-                        #inlibro-carrousel a.locked {
-                          width: 100px;
-                        }
-
-                        #inlibro-carrousel .slider {
-                          overflow: hidden;
-                        }
-
-                        #inlibro-carrousel .slider img {
-                          height: 175px;
-                        }
-
-                        #inlibro-carrousel .slider hr + div {
-                          background-color: #d5e1df;
-                        }
-
-                        #inlibro-carrousel .special-title {
-                          text-align: center;
-                          margin: 0;
-                          margin-top: 10px;
-                          margin-bottom: 35px;
-                          font-weight: bold;
-                          font-style: italic;
-                          font-size: 25px;
-                          color: black;
-                        }
-
-                        #inlibro-carrousel hr {
-                          margin: -5px 0px 15px 0px;
-                        }
-
-                        #inlibro-carrousel h2 {
-                          color: black;
-                        }
-
-                        #inlibro-carrousel .images {
-                          left: 0px;
-                          position: relative;
-                          white-space: nowrap;
-                        }
-
-                        #inlibro-carrousel .controls {
-                          margin-bottom: 115px;
-                          margin-top: 20px;
-                        }
-
-                        #inlibro-carrousel button {
-                          color: #000000;
-                          background-color: #ffffff;
-                          border: 0;
-                          height: 2em;
-                          font-size: 120%;
-                          border-radius: 3px;
-                        }
-
-                        #inlibro-carrousel .images a {
-                          display: inline-block;
-                          margin-right: 5px;
-                        }
-                      </style>
-
-                      <!-- This is the cloud carousel javascript(cloud-carousel.1.0.0.js) -->
-                      <script>
-                        //////////////////////////////////////////////////////////////////////////////////
-                        // CloudCarousel V1.0.520px
-                        // Reflection code based on plugin by Christophe Beyls <http://www.digitalia.be>
-                        //
-                        // Please retain this copyright header in all versions of the software
-                        //////////////////////////////////////////////////////////////////////////////////
-                        document.addEventListener(
-                          "DOMContentLoaded",
-                          function () {
-                            (function ($) {
-                              function Reflection(img, reflHeight, opacity) {
-                                var reflection,
-                                  cntx,
-                                  imageWidth = img.width,
-                                  imageHeight = img.width,
-                                  gradient,
-                                  parent;
-                                parent = $(img.parentNode);
-                                this.element = reflection = parent
-                                  .append(
-                                    "<canvas class='reflection' style='position:absolute'/>"
-                                  )
-                                  .find(":last")[0];
-                                if (!reflection.getContext && $.support.msie) {
-                                  this.element = reflection = parent
-                                    .append(
-                                      "<img class='reflection' style='position:absolute'/>"
-                                    )
-                                    .find(":last")[0];
-                                  reflection.src = img.src;
-                                  reflection.style.filter =
-                                    "flipv progid:DXImageTransform.Microsoft.Alpha(opacity=" +
-                                    opacity * 100 +
-                                    ", style=1, finishOpacity=0, startx=0, starty=0, finishx=0, finishy=" +
-                                    (reflHeight / imageHeight) * 100 +
-                                    ")";
-                                } else {
-                                  cntx = reflection.getContext("2d");
-                                  try {
-                                    $(reflection).attr({
-                                      width: imageWidth,
-                                      height: reflHeight,
-                                    });
-                                    cntx.save();
-                                    cntx.translate(0, imageHeight - 1);
-                                    cntx.scale(1, -1);
-                                    cntx.drawImage(
-                                      img,
-                                      0,
-                                      0,
-                                      imageWidth,
-                                      imageHeight
-                                    );
-                                    cntx.restore();
-                                    cntx.globalCompositeOperation =
-                                      "destination-out";
-                                    gradient = cntx.createLinearGradient(
-                                      0,
-                                      0,
-                                      0,
-                                      reflHeight
-                                    );
-                                    gradient.addColorStop(
-                                      0,
-                                      "rgba(255, 255, 255, " +
-                                        (1 - opacity) +
-                                        ")"
-                                    );
-                                    gradient.addColorStop(
-                                      1,
-                                      "rgba(255, 255, 255, 1.0)"
-                                    );
-                                    cntx.fillStyle = gradient;
-                                    cntx.fillRect(0, 0, imageWidth, reflHeight);
-                                  } catch (e) {
-                                    return;
-                                  }
-                                }
-                                $(reflection).attr({
-                                  alt: $(img).attr("alt"),
-                                  title: $(img).attr("title"),
-                                });
-                              }
-                              var Item = function (imgIn, options) {
-                                this.orgWidth = imgIn.width;
-                                this.orgHeight = imgIn.height;
-                                this.image = imgIn;
-                                this.reflection = null;
-                                this.alt = imgIn.alt;
-                                this.title = imgIn.title;
-                                this.imageOK = false;
-                                this.options = options;
-                                this.imageOK = true;
-                                if (this.options.reflHeight > 0) {
-                                  this.reflection = new Reflection(
-                                    this.image,
-                                    this.options.reflHeight,
-                                    this.options.reflOpacity
-                                  );
-                                }
-                                $(this.image).css("position", "absolute");
-                              };
-                              var Controller = function (
-                                container,
-                                images,
-                                options
-                              ) {
-                                var items = [],
-                                  funcSin = Math.sin,
-                                  funcCos = Math.cos,
-                                  ctx = this;
-                                this.controlTimer = 0;
-                                this.stopped = false;
-                                this.container = container;
-                                this.xRadius = options.xRadius;
-                                this.yRadius = options.yRadius;
-                                this.showFrontTextTimer = 0;
-                                this.autoRotateTimer = 0;
-                                if (options.xRadius === 0) {
-                                  this.xRadius = $(container).width() / 2.3;
-                                }
-                                if (options.yRadius === 0) {
-                                  this.yRadius = $(container).height() / 6;
-                                }
-                                this.xCentre = options.xPos;
-                                this.yCentre = options.yPos;
-                                this.frontIndex = 0;
-                                this.rotation = this.destRotation = Math.PI / 2;
-                                this.timeDelay = 1000 / options.FPS;
-                                if (options.altBox !== null) {
-                                  $(options.altBox).css("display", "block");
-                                  $(options.titleBox).css("display", "block");
-                                }
-                                $(container).css({
-                                  position: "relative",
-                                  overflow: "hidden",
-                                });
-                                $(options.buttonLeft).css("display", "inline");
-                                $(options.buttonRight).css("display", "inline");
-                                $(options.buttonLeft).bind(
-                                  "mouseup",
-                                  this,
-                                  function (event) {
-                                    event.data.rotate(-1);
-                                    return false;
-                                  }
-                                );
-                                $(options.buttonRight).bind(
-                                  "mouseup",
-                                  this,
-                                  function (event) {
-                                    event.data.rotate(1);
-                                    return false;
-                                  }
-                                );
-                                if (options.mouseWheel) {
-                                  $(container).bind(
-                                    "mousewheel",
-                                    this,
-                                    function (event, delta) {
-                                      event.data.rotate(delta);
-                                      return false;
-                                    }
-                                  );
-                                }
-                                $(container).bind(
-                                  "mouseover click",
-                                  this,
-                                  function (event) {
-                                    clearInterval(event.data.autoRotateTimer);
-                                    var text = $(event.target).attr("alt");
-                                    if (text !== undefined && text !== null) {
-                                      clearTimeout(
-                                        event.data.showFrontTextTimer
-                                      );
-                                      $(options.altBox).html(
-                                        $(event.target).attr("alt")
-                                      );
-                                      $(options.titleBox).html(
-                                        $(event.target).attr("title")
-                                      );
-                                      if (
-                                        options.bringToFront &&
-                                        event.type == "click"
-                                      ) {
-                                        var idx = $(event.target).data(
-                                          "itemIndex"
-                                        );
-                                        var frontIndex = event.data.frontIndex;
-                                        var diff =
-                                          (idx - frontIndex) % images.length;
-                                        if (
-                                          Math.abs(diff) >
-                                          images.length / 2
-                                        ) {
-                                          diff +=
-                                            diff > 0
-                                              ? -images.length
-                                              : images.length;
-                                        }
-                                        event.data.rotate(-diff);
-                                      }
-                                    }
-                                  }
-                                );
-                                $(container).bind(
-                                  "mouseout",
-                                  this,
-                                  function (event) {
-                                    var context = event.data;
-                                    clearTimeout(context.showFrontTextTimer);
-                                    context.showFrontTextTimer = setTimeout(
-                                      function () {
-                                        context.showFrontText();
-                                      },
-                                      1000
-                                    );
-                                    context.autoRotate();
-                                  }
-                                );
-                                $(container).bind(
-                                  "mousedown",
-                                  this,
-                                  function (event) {
-                                    event.data.container.focus();
-                                    return false;
-                                  }
-                                );
-                                container.onselectstart = function () {
-                                  return false;
-                                };
-                                this.innerWrapper = $(container)
-                                  .wrapInner(
-                                    '<div style="position:absolute;width:100%;height:100%;"/>'
-                                  )
-                                  .children()[0];
-                                this.showFrontText = function () {
-                                  if (items[this.frontIndex] === undefined) {
-                                    return;
-                                  }
-                                  $(options.titleBox).html(
-                                    $(items[this.frontIndex].image).attr(
-                                      "title"
-                                    )
-                                  );
-                                  $(options.altBox).html(
-                                    $(items[this.frontIndex].image).attr("alt")
-                                  );
-                                };
-                                this.go = function () {
-                                  if (this.controlTimer !== 0) {
-                                    return;
-                                  }
-                                  var context = this;
-                                  this.controlTimer = setTimeout(function () {
-                                    context.updateAll();
-                                  }, this.timeDelay);
-                                };
-                                this.stop = function () {
-                                  clearTimeout(this.controlTimer);
-                                  this.controlTimer = 0;
-                                };
-
-                                this.rotate = function (direction) {
-                                  this.frontIndex -= direction;
-                                  while (this.frontIndex < 0) {
-                                    this.frontIndex += items.length;
-                                  }
-                                  this.frontIndex %= items.length;
-                                  this.destRotation +=
-                                    (Math.PI / items.length) * (2 * direction);
-                                  this.showFrontText();
-                                  this.go();
-                                };
-
-                                this.autoRotate = function () {
-                                  if (options.autoRotate !== "no") {
-                                    var dir =
-                                      options.autoRotate === "right" ? 1 : -1;
-                                    this.autoRotateTimer = setInterval(
-                                      function () {
-                                        ctx.rotate(dir);
-                                      },
-                                      options.autoRotateDelay
-                                    );
-                                  }
-                                };
-                                this.updateAll = function () {
-                                  var minScale = options.minScale;
-                                  var smallRange = (1 - minScale) * 0.5;
-                                  var w, h, x, y, scale, item, sinVal;
-                                  var change =
-                                    this.destRotation - this.rotation;
-                                  var absChange = Math.abs(change);
-                                  this.rotation += change * options.speed;
-                                  if (absChange < 0.001) {
-                                    this.rotation = this.destRotation;
-                                  }
-                                  var itemsLen = items.length;
-                                  var spacing = (Math.PI / itemsLen) * 2;
-                                  var radians = this.rotation;
-                                  var isMSIE = $.support.msie;
-                                  this.innerWrapper.style.display = "none";
-                                  var style;
-                                  var px = "px",
-                                    reflHeight;
-                                  var context = this;
-                                  for (var i = 0; i < itemsLen; i++) {
-                                    item = items[i];
-                                    sinVal = funcSin(radians);
-                                    scale =
-                                      (sinVal + 1) * smallRange + minScale;
-                                    x =
-                                      this.xCentre +
-                                      (funcCos(radians) * this.xRadius -
-                                        item.orgWidth * 0.5) *
-                                        scale;
-                                    y =
-                                      this.yCentre +
-                                      sinVal * this.yRadius * scale;
-                                    if (item.imageOK) {
-                                      var img = item.image;
-                                      w = img.width = item.orgWidth * scale;
-                                      h = img.height = item.orgHeight * scale;
-                                      img.style.left = x + px;
-                                      img.style.top = y + px;
-                                      img.style.zIndex =
-                                        ("" + scale * 100) >> 0;
-                                      if (item.reflection !== null) {
-                                        reflHeight = options.reflHeight * scale;
-                                        style = item.reflection.element.style;
-                                        style.left = x + px;
-                                        style.top =
-                                          y + h + options.reflGap * scale + px;
-                                        style.width = w + px;
-                                        if (isMSIE) {
-                                          style.filter.finishy =
-                                            (reflHeight / h) * 100;
-                                        } else {
-                                          style.height = reflHeight + px;
-                                        }
-                                      }
-                                    }
-                                    radians += spacing;
-                                  }
-                                  this.innerWrapper.style.display = "block";
-                                  if (absChange >= 0.001) {
-                                    this.controlTimer = setTimeout(function () {
-                                      context.updateAll();
-                                    }, this.timeDelay);
-                                  } else {
-                                    this.stop();
-                                  }
-                                };
-                                this.checkImagesLoaded = function () {
-                                  var i;
-                                  for (i = 0; i < images.length; i++) {
-                                    if (
-                                      images[i].width === undefined ||
-                                      (images[i].complete !== undefined &&
-                                        !images[i].complete)
-                                    ) {
-                                      return;
-                                    }
-                                  }
-                                  for (i = 0; i < images.length; i++) {
-                                    items.push(new Item(images[i], options));
-                                    $(images[i]).data("itemIndex", i);
-                                  }
-                                  clearInterval(this.tt);
-                                  this.showFrontText();
-                                  this.autoRotate();
-                                  this.updateAll();
-                                };
-                                this.tt = setInterval(function () {
-                                  ctx.checkImagesLoaded();
-                                }, 50);
-                              };
-                              $.fn.CloudCarousel = function (options) {
-                                this.each(function () {
-                                  options = $.extend(
-                                    {},
-                                    {
-                                      reflHeight: 0,
-                                      reflOpacity: 0.5,
-                                      reflGap: 0,
-                                      minScale: 0.5,
-                                      xPos: 0,
-                                      yPos: 0,
-                                      xRadius: 0,
-                                      yRadius: 0,
-                                      altBox: null,
-                                      titleBox: null,
-                                      FPS: 30,
-                                      autoRotate: "no",
-                                      autoRotateDelay: 1500,
-                                      speed: 0.2,
-                                      mouseWheel: false,
-                                      bringToFront: false,
-                                    },
-                                    options
-                                  );
-                                  $(this).data(
-                                    "cloudcarousel",
-                                    new Controller(
-                                      this,
-                                      $(".cloudcarousel", $(this)),
-                                      options
-                                    )
-                                  );
-                                });
-                                return this;
-                              };
-                            })(jQuery);
-
-                            //This initialises carousels on the container elements specified.
-
-                            setInterval(function () {
-                              let buttonLeft = $(
-                                "#carrousel-0 .controls button"
-                              )[0];
-                              let buttonRight = $(
-                                "#carrousel-0 .controls button"
-                              )[1];
-                              Left(buttonRight);
-                            }, 5000);
-
-                            $(".loadingDiv").delay(1000);
-                            $(".loadingDiv").fadeOut(1000);
-                          }
-                        );
-                      </script>
-
-                      <script>
-                        var scrolling_duration = 250;
-                        var time_between_scrolling = 5000;
-
-                        function Left(button) {
-                          let container = document
-                            .getElementById(button.className)
-                            .getElementsByClassName("images")[0];
-                          let livres = container.children;
-
-                          var last = $(container).find("a img").last();
-                          if (
-                            $(last).position().left + $(last)[0].clientWidth <
-                            $(".slider")[0].clientWidth
-                          )
-                            return;
-                          $(container).animate(
-                            {
-                              left:
-                                $(container).find("a img").eq(1).position()
-                                  .left * -1,
-                            },
-                            scrolling_duration,
-                            function () {
-                              $(container).css("left", "0");
-                              $(container).append(
-                                $(container).find("a").first()
-                              );
-                            }
-                          );
-                        }
-                        function Right(button) {
-                          let container = document
-                            .getElementById(button.className)
-                            .getElementsByClassName("images")[0];
-                          let livres = container.children;
-
-                          var last = $(container).find("a img").last();
-                          if (
-                            $(last).position().left + $(last)[0].clientWidth <
-                            $(".slider")[0].clientWidth
-                          )
-                            return;
-                          $(container).animate(
-                            {
-                              left: $(container).find("a img").eq(1).position()
-                                .left,
-                            },
-                            scrolling_duration,
-                            function () {
-                              $(container).css("left", "0");
-                              $(container).prepend(
-                                $(container).find("a").last()
-                              );
-                            }
-                          );
-                        }
-
-                        /*
+    </div>
+    <div class="terceira-coluna">
+        <img 
+            src="https://www.canoas.rs.gov.br/ wp-content/uploads/2019/08/Pablo-Reis-30.jpg" alt="professora dando uma palestra" class="imagem-noticia" />
+    </div>
+</section>
+<!-- Fim das Noticias-->
+        display: block;
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+        text-indent: -999px;
+        background-color: #ccc;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 5px;
+    }
+    
+    .carousel-indicators .active {
+        background-color: #fff;
+    }
+    
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 15px;
+        background: #333333;
+        background: rgba(0, 0, 0, 0.75);
+    }
+    
+    .carousel-caption h4, .carousel-caption p {
+        color: #ffffff;
+        line-height: 20px;
+    }
+    
+    .carousel-caption h4 {
+        margin: 0 0 5px;
+    }
+    
+    .carousel-caption p {
+        margin-bottom: 0;
+    }
+      
+        /*De bootstrap pour le carrousel FIN*/
+    
+    
+    #inlibro-carrousel .carousel-caption .title-text{
+        color : #000000;
+    }
+    
+    #inlibro-carrousel .carousel-control,
+    #inlibro-carrousel .carousel-caption{
+        background-color : #ffffff;
+        z-index:1000;
+        cursor : pointer;
+    }
+    
+    #inlibro-carrousel .carousel-caption{
+        font-weight : bold;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    
+    #inlibro-carrousel .carousel-control,
+    #inlibro-carrousel .carousel-caption{
+        background-color : #ffffff;
+        z-index:1000;
+    }
+    
+    #inlibro-carrousel .carousel-caption{
+        font-weight : bold;
+    }
+    
+    #inlibro-carrousel a.locked{
+        width:100px;
+    }
+    
+    #inlibro-carrousel .slider {
+        overflow: hidden;
+    }
+    
+    #inlibro-carrousel .slider img {
+        height: 175px;
+    }
+    
+    #inlibro-carrousel .slider hr + div {
+        background-color: #d5e1df;
+    }
+    
+    #inlibro-carrousel .special-title{ 
+        text-align: center;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 35px;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 25px;
+        color:black;
+    }
+    
+    #inlibro-carrousel hr{
+        margin: -5px 0px 15px 0px;
+    }
+    
+    #inlibro-carrousel h2 {
+        color: black;
+    }
+    
+    #inlibro-carrousel .images {
+        left: 0px;
+        position: relative;
+        white-space: nowrap;
+    
+    }
+    
+    #inlibro-carrousel .controls{
+        margin-bottom: 115px;
+        margin-top: 20px;
+    }
+    
+    #inlibro-carrousel button{
+        color : #000000;
+        background-color: #ffffff;
+        border: 0;
+        height : 2em;
+        font-size: 120%;
+        border-radius : 3px;
+    }
+    
+    #inlibro-carrousel .images a {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    </style>
+    
+    <!-- This is the cloud carousel javascript(cloud-carousel.1.0.0.js) -->
+    <script>
+    //////////////////////////////////////////////////////////////////////////////////
+    // CloudCarousel V1.0.5
+    // (c) 2011 by R Cecco. <http://www.professorcloud.com>
+    // MIT License
+    //
+    // Reflection code based on plugin by Christophe Beyls <http://www.digitalia.be>
+    //
+    // Please retain this copyright header in all versions of the software
+    //////////////////////////////////////////////////////////////////////////////////
+    document.addEventListener('DOMContentLoaded', function() {
+        (function($){function Reflection(img,reflHeight,opacity){var reflection,cntx,imageWidth=img.width,imageHeight=img.width,gradient,parent;parent=$(img.parentNode);this.element=reflection=parent.append("<canvas class='reflection' style='position:absolute'/>").find(':last')[0];if(!reflection.getContext&&$.support.msie){this.element=reflection=parent.append("<img class='reflection' style='position:absolute'/>").find(':last')[0];reflection.src=img.src;reflection.style.filter="flipv progid:DXImageTransform.Microsoft.Alpha(opacity="+(opacity*100)+", style=1, finishOpacity=0, startx=0, starty=0, finishx=0, finishy="+(reflHeight/imageHeight*100)+")"}else{cntx=reflection.getContext("2d");try{$(reflection).attr({width:imageWidth,height:reflHeight});cntx.save();cntx.translate(0,imageHeight-1);cntx.scale(1,-1);cntx.drawImage(img,0,0,imageWidth,imageHeight);cntx.restore();cntx.globalCompositeOperation="destination-out";gradient=cntx.createLinearGradient(0,0,0,reflHeight);gradient.addColorStop(0,"rgba(255, 255, 255, "+(1-opacity)+")");gradient.addColorStop(1,"rgba(255, 255, 255, 1.0)");cntx.fillStyle=gradient;cntx.fillRect(0,0,imageWidth,reflHeight)}catch(e){return}}$(reflection).attr({'alt':$(img).attr('alt'),title:$(img).attr('title')})}var Item=function(imgIn,options){this.orgWidth=imgIn.width;this.orgHeight=imgIn.height;this.image=imgIn;this.reflection=null;this.alt=imgIn.alt;this.title=imgIn.title;this.imageOK=false;this.options=options;this.imageOK=true;if(this.options.reflHeight>0){this.reflection=new Reflection(this.image,this.options.reflHeight,this.options.reflOpacity)}$(this.image).css('position','absolute')};var Controller=function(container,images,options){var items=[],funcSin=Math.sin,funcCos=Math.cos,ctx=this;this.controlTimer=0;this.stopped=false;this.container=container;this.xRadius=options.xRadius;this.yRadius=options.yRadius;this.showFrontTextTimer=0;this.autoRotateTimer=0;if(options.xRadius===0){this.xRadius=($(container).width()/2.3)}if(options.yRadius===0){this.yRadius=($(container).height()/6)}this.xCentre=options.xPos;this.yCentre=options.yPos;this.frontIndex=0;this.rotation=this.destRotation=Math.PI/2;this.timeDelay=1000/options.FPS;if(options.altBox!==null){$(options.altBox).css('display','block');$(options.titleBox).css('display','block')}$(container).css({position:'relative',overflow:'hidden'});$(options.buttonLeft).css('display','inline');$(options.buttonRight).css('display','inline');$(options.buttonLeft).bind('mouseup',this,function(event){event.data.rotate(-1);return false});$(options.buttonRight).bind('mouseup',this,function(event){event.data.rotate(1);return false});if(options.mouseWheel){$(container).bind('mousewheel',this,function(event,delta){event.data.rotate(delta);return false})}$(container).bind('mouseover click',this,function(event){clearInterval(event.data.autoRotateTimer);var text=$(event.target).attr('alt');if(text!==undefined&&text!==null){clearTimeout(event.data.showFrontTextTimer);$(options.altBox).html(($(event.target).attr('alt')));$(options.titleBox).html(($(event.target).attr('title')));if(options.bringToFront&&event.type=='click'){var idx=$(event.target).data('itemIndex');var frontIndex=event.data.frontIndex;var diff=(idx-frontIndex)%images.length;if(Math.abs(diff)>images.length/2){diff+=(diff>0?-images.length:images.length)}event.data.rotate(-diff)}}});$(container).bind('mouseout',this,function(event){var context=event.data;clearTimeout(context.showFrontTextTimer);context.showFrontTextTimer=setTimeout(function(){context.showFrontText()},1000);context.autoRotate()});$(container).bind('mousedown',this,function(event){event.data.container.focus();return false});container.onselectstart=function(){return false};this.innerWrapper=$(container).wrapInner('<div style="position:absolute;width:100%;height:100%;"/>').children()[0];this.showFrontText=function(){if(items[this.frontIndex]===undefined){return}$(options.titleBox).html($(items[this.frontIndex].image).attr('title'));$(options.altBox).html($(items[this.frontIndex].image).attr('alt'))};this.go=function(){if(this.controlTimer!==0){return}var context=this;this.controlTimer=setTimeout(function(){context.updateAll()},this.timeDelay)};this.stop=function(){clearTimeout(this.controlTimer);this.controlTimer=0};
+    
+        this.rotate=function(direction){
+            this.frontIndex-=direction;
+            while (this.frontIndex<0) { this.frontIndex += items.length; }
+            this.frontIndex%=items.length;
+            this.destRotation+=(Math.PI/items.length)*(2*direction);
+            this.showFrontText();
+            this.go()
+        };
+    
+        this.autoRotate=function(){
+            if(options.autoRotate!=='no'){
+                var dir=(options.autoRotate==='right')?1:-1;
+                this.autoRotateTimer=setInterval(function(){ctx.rotate(dir)},options.autoRotateDelay)}};
+                this.updateAll=function(){var minScale=options.minScale;
+                var smallRange=(1-minScale)*0.5;
+                var w,h,x,y,scale,item,sinVal;
+                var change=(this.destRotation-this.rotation);
+                var absChange=Math.abs(change);
+                this.rotation+=change*options.speed;
+                if(absChange<0.001){this.rotation=this.destRotation}
+                var itemsLen=items.length;
+                var spacing=(Math.PI/itemsLen)*2;
+                var radians=this.rotation;
+                var isMSIE=$.support.msie;
+                this.innerWrapper.style.display='none';
+                var style;var px='px',reflHeight;
+                var context=this;
+                for(var i=0;i<itemsLen;i++){item=items[i];sinVal=funcSin(radians);
+                scale=((sinVal+1)*smallRange)+minScale;
+                x=this.xCentre+(((funcCos(radians)*this.xRadius)-(item.orgWidth*0.5))*scale);
+                y=this.yCentre+(((sinVal*this.yRadius))*scale);
+                if(item.imageOK){var img=item.image;
+                w=img.width=item.orgWidth*scale;
+                h=img.height=item.orgHeight*scale;
+                img.style.left=x+px;
+                img.style.top=y+px;img.style.zIndex=""+(scale*100)>>0;
+                if(item.reflection!==null){reflHeight=options.reflHeight*scale;
+                style=item.reflection.element.style;style.left=x+px;
+                style.top=y+h+options.reflGap*scale+px;
+                style.width=w+px;
+                if(isMSIE){style.filter.finishy=(reflHeight/h*100)}else{style.height=reflHeight+px}}}radians+=spacing}this.innerWrapper.style.display='block';if(absChange>=0.001){this.controlTimer=setTimeout(function(){context.updateAll()},this.timeDelay)}else{this.stop()}};this.checkImagesLoaded=function(){var i;for(i=0;i<images.length;i++){if((images[i].width===undefined)||((images[i].complete!==undefined)&&(!images[i].complete))){return}}for(i=0;i<images.length;i++){items.push(new Item(images[i],options));$(images[i]).data('itemIndex',i)}clearInterval(this.tt);this.showFrontText();this.autoRotate();this.updateAll()};this.tt=setInterval(function(){ctx.checkImagesLoaded()},50)};$.fn.CloudCarousel=function(options){this.each(function(){options=$.extend({},{reflHeight:0,reflOpacity:0.5,reflGap:0,minScale:0.5,xPos:0,yPos:0,xRadius:0,yRadius:0,altBox:null,titleBox:null,FPS:30,autoRotate:'no',autoRotateDelay:1500,speed:0.2,mouseWheel:false,bringToFront:false},options);$(this).data('cloudcarousel',new Controller(this,$('.cloudcarousel',$(this)),options))});return this}})(jQuery);
+    
+        //This initialises carousels on the container elements specified.
+        
+            
+                
+                    setInterval(
+                        function() {
+                            let buttonLeft = $("#carrousel-0 .controls button")[0];
+                            let buttonRight = $("#carrousel-0 .controls button")[1];
+                            Left(buttonRight);
+                        }, 5000
+                    );
+                
+            
+        
+    
+        $(".loadingDiv").delay(1000);
+        $(".loadingDiv").fadeOut(1000);
+    });
+    </script>
+    
+    
+    <script>
+    var scrolling_duration = 250;
+    var time_between_scrolling = 5000;
+    
+    
+    function Left (button){
+        let container =  document.getElementById(button.className).getElementsByClassName("images")[0];
+        let livres = container.children;
+    
+        var last = $(container).find("a img").last();
+        if ($(last).position().left + $(last)[0].clientWidth < $(".slider")[0].clientWidth) return;
+        $(container).animate({
+            left: $(container).find("a img").eq(1).position().left * -1,
+        }, scrolling_duration, function() {
+            $(container).css("left", "0");
+            $(container).append($(container).find("a").first());
+        });  
+    };
+    function Right (button){
+        let container =  document.getElementById(button.className).getElementsByClassName("images")[0];
+        let livres = container.children;
+    
+        var last = $(container).find("a img").last();
+        if ($(last).position().left + $(last)[0].clientWidth < $(".slider")[0].clientWidth) return;
+        $(container).animate({
+            left: $(container).find("a img").eq(1).position().left,
+        }, scrolling_duration, function() {
+            $(container).css("left", "0");
+            $(container).prepend($(container).find("a").last());
+        });
+    };
+    
+    /*
     window.addEventListener('load', function() {
         function setPosition() {
             $(".images").each(function(i) {
@@ -1668,724 +1234,260 @@
         //setInterval(setPosition, time_between_scrolling);
     });
     */
-                      </script>
-                      <!-- Fin du carrousel -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- / .col 6/8 -->
-
-            <div class="col-12 col-lg-3 order-md-2">
-              <div id="login">
-                <form
-                  action="/cgi-bin/koha/opac-user.pl"
-                  method="post"
-                  name="auth"
-                  id="auth"
-                  autocomplete="off"
-                >
-                  <input type="hidden" name="koha_login_context" value="opac" />
-                  <fieldset class="brief">
-                    <legend style="color: #247777">Acesse sua conta:</legend>
-                    <label
-                      for="userid"
-                      style="color: #25a2a2; font-weight: bolder"
-                      >Login:</label
-                    >
-                    <input
-                      class="form-control"
-                      type="text"
-                      id="userid"
-                      name="userid"
-                    />
-                    <label
-                      for="password"
-                      style="color: #25a2a2; font-weight: bolder"
-                      >Senha:</label
-                    >
-                    <input
-                      class="form-control"
-                      type="password"
-                      id="password"
-                      name="password"
-                    />
-                    <fieldset class="action">
-                      <input
-                        class="btn btn-primary"
-                        type="submit"
-                        value="Login"
-                        style="font-weight: 550"
-                      />
-                    </fieldset>
-                  </fieldset>
-                </form>
-              </div>
-              <!-- /#login -->
-            </div>
-            <!-- / .col -->
-          </div>
-          <!-- /.container-fluid -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.main -->
-
-      <!-- Eventos / Avisos / notícias -->
-      <!--
-        <section>
-            <div>
-                <h2></h2>
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-                <p>Quando: 22/12/2022 às 16h</br> 
-                Onde: quadra da escola</p>
-            </div>
-            <img src="" alt="">
-        </section>
-        <section>
+    </script>
+    <!-- Fin du carrousel --></div>
+     </div>
+     
+     </div>
+     
     
-        </section>
-    -->
-
-      <div class="container-fluid" style="background-color: #fff">
-        <div class="row">
-          <div class="col">
-            <div id="report-koha-url">
-              <div class="row justify-content-between">
-                <div class="col">
-                  <!--Rodapé-->
-                  <!-- Rodapé antigo
-
-            <div id="koha_url" class="clearfix noprint">
-            <p>Powered by Semed <a class="koha_url" href="http://koha-community.org">Koha</a>
-            </p>
-            </div> <-- /#koha_url - >
-        -->
-                  <!--Novo Rodapé-->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row.justify-content-between -->
-            </div>
-            <!-- /#report-koha-url -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </div>
-    <!-- / #wrapper in masthead.inc -->
-    <!--
-
-      <footer class="Rodape" style="padding-top: 25px; width: 100%">
-        <div
-          style="
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-          "
-        >
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 44%;">
-  
-            <img
-              src="./imagens/logos/Marca Prefeitura de Manaus.png"
-              style="width: 150px; height: 150px"
-              alt="logo prefeitura de manaus"
-            />
-            <img
-              src="./imagens/logos/Marca DDPM.png"
-              style="width: 180px; height: 120px"
-              alt="logo semed"
-            />
-        </div>
-          <img
-            src="./imagens/logos/Rodapé Malha Prefeitura.png"
-            style="width: 56%; height: 130px"
-            alt="arco-iris"
-          />
-        </div>
-        <p style="text-align: center; margin-top: 30px">
-          Copyright © 2023 Semed, todos os direitos reservados.
-        </p>
-      </footer>
-    -->
-
-    <!-- Começo do Footer-->
-    <footer id="Rodape">
-      <style>
-        #Rodape {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding-top: 20px;
-          width: 100%;
-        }
-
-        .img-logo {
-          border-radius: 50%;
-          width: 44px;
-        }
-
-        .img-semed {
-          width: 120px;
-          height: 65px;
-        }
-
-        .img-prefeitura {
-          width: 200px;
-        }
-
-        .div-imagem {
-          background: url("https://www.manaus.am.gov.br/semed/wp-content/themes/prefeitura-manaus/dist/images/graphism/graph-footer.svg");
-          width: 110%;
-          height: 55px;
-          margin: 25px -35px 0 -35px;
-        }
-
-        .secao-sobre {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          margin-top: 50px;
-        }
-
-        .primeira-secao {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          width: 100%;
-        }
-
-        .imgs-institucionais {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          width: 500px;
-        }
-
-        .h6-info {
-          text-align: center;
-          color: #736384;
-        }
-
-        .imgs-redes-sociais {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          margin-top: 20px;
-        }
-
-        h3 {
-          color: #16979e;
-          text-align: center;
-        }
-
-        #copyright {
-          margin-top: 15px;
-        }
-
-        @media screen and (max-width: 800px) {
-          .imgs-institucionais {
-            flex-direction: column;
-            justify-content: center;
-            margin: 20px auto 0 auto;
-          }
-
-          .primeira-secao {
-            flex-direction: column;
-          }
-
-          .imgs-redes-sociais {
-            width: 230px;
-            margin: 20px auto 0 auto;
-          }
-
-          .img-semed {
-            margin: 0 auto 20px auto;
-          }
-
-          .img-prefeitura {
-            margin: 0 auto;
-          }
-        }
-      </style>
-      <div class="primeira-secao">
-        <div class="secao-redes-sociais">
-          <h3>Siga nossas redes sociais</h3>
-          <div class="imgs-redes-sociais">
-            <a href="https://www.instagram.com/semedmanaus/">
-              <img
-                src="https://www.manaus.am.gov.br/semed/wp-content/themes/prefeitura-manaus/dist/images/icon/icon-instagram.png"
-                alt="logo instagram"
-                class="img-logo"
-              />
-            </a>
-            <a href="https://www.facebook.com/semedmanaus">
-              <img
-                src="https://www.manaus.am.gov.br/semed/wp-content/themes/prefeitura-manaus/dist/images/icon/icon-facebook.png"
-                alt="logo facebook"
-                class="img-logo"
-              />
-            </a>
-            <a href="https://www.youtube.com/@SemedEducacaoManaus">
-              <img
-                src="https://www.manaus.am.gov.br/semed/wp-content/themes/prefeitura-manaus/dist/images/icon/icon-youtube.png"
-                alt="logo youtube"
-                class="img-logo"
-              />
-            </a>
-            <a href="https://flickr.com/photos/155076509@N04/">
-              <img
-                src="https://www.manaus.am.gov.br/semed/wp-content/themes/prefeitura-manaus/dist/images/icon/icon-flickr.png"
-                alt="outras redes"
-                class="img-logo"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="imgs-institucionais">
-          <a href="https://www.manaus.am.gov.br/semed/">
-            <img
-              src="https://www.manaus.am.gov.br/semed/wp-content/uploads/sites/3/2022/11/logo-semed-footer.png"
-              alt="logo semed"
-              class="img-semed"
-            />
-          </a>
-          <a href="https://www.manaus.am.gov.br/">
-            <img
-              src="https://www.manaus.am.gov.br/wp-content/uploads/2022/10/logo.png"
-              alt="logo prefeitura"
-              class="img-prefeitura"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="secao-sobre">
-        <h6 class="h6-info">Prefeitura Municipal de Manaus</h6>
-        <h6 class="h6-info">Munic&iacute;pio de Manaus</h6>
-        <h6 class="h6-info">CNPJ: 04.365.326.0001-73</h6>
-        <h6 class="h6-info">Av. Brasil, 2971 &ndash; Compensa, Manaus-AM</h6>
-        <h6 class="h6-info">CEP: 69036-110</h6>
-        <h6 id="copyright" class="h6-info">
-          Copyright &copy; 2023 Semed, todos os direitos reservados.&lt;/h6 &gt;
-        </h6>
-      </div>
-      <div class="div-imagem"></div>
-    </footer>
-    <!-- Fim do Footer -->
-
-    <!--Começo da Animação-->
-    <div class="container">
-      <h1>Bibliotecas <span class="txt-type" data-wait="2500" data-words='["Escolares Integradas.", "Escolares Municipais.", "Escolares onlines."]'></span><i class="fas fa-pencil-alt"></i></h1>
-      
-    </div>
-    <style type="text/css">
-      
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    padding: 0 3rem;
-}
-h1,h2 {
-    font-weight: 200;
-    margin: 0.4rem;
-}
-h1 {
-    font-size: 3.5rem;
-}
-h2 {
-    font-size: 2rem;
-    color:rgb(73, 66, 66);
-}
-.author {
-    color: rgb(180, 0, 75);
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgb(23, 77, 32);
-}
-
-.fas {
-    color: rgb(0, 0, 0);
-    font-size: 3rem;
-   /*  background-color: green; conditional */
-    margin: 0px;
-    padding: 0px;
-    /*****
-    animation-name: erasing;    
-    animation-duration: 3s;
-    ***/
-}
-/**** this is the Pencil Erasing animation****/
-.erasing-animation {
-    animation-name: erasing;
-    animation-duration: 1.8s;
-}
-
-@keyframes erasing {
-    0% {transform: rotate(0deg);}
-    10% {transform: rotate(180deg);}
-    60% {transform: rotate(180deg);}
-    70% {transform: rotate(0deg);}
-    100% {transform: rotate(0deg);}
-} 
+     </div>
+     
+     
     
-/***this is the pencil writing animation*****/
-.writing-animation {
-    animation-name: writting;    
-    animation-duration: 4s; 
-}
-
-@keyframes writting {
-    0%  {transform: translate(0px,0px);}
-    2%  {transform: translate(30px,-40px);}
-    4%  {transform: translate(0px,0px);}
-    6%  {transform: translate(30px,-40px);}
-    8% {transform: translate(0px,0px);}
-    10% {transform: translate(30px,-40px);}
-    12% {transform: translate(0px,0px);}
-    14% {transform: translate(30px,-40px);}
-    16% {transform: translate(0px,0px);}
-    18% {transform: translate(30px,-40px);}
-    20% {transform: translate(0px,0px);}
-    22% {transform: translate(30px,-40px);}
-    24% {transform: translate(0px,0px);}
-    26% {transform: translate(30px,-40px);}
-    28% {transform: translate(0px,0px);}
-    30% {transform: translate(30px,-40px);}
-    32% {transform: translate(0px,0px);}
-    34% {transform: translate(30px,-40px);}
-    36% {transform: translate(0px,0px);}
-    38% {transform: translate(30px,-40px);}
-    40% {transform: translate(0px,0px);}
-    42% {transform: translate(30px,-40px);}
-    44% {transform: translate(0px,0px);}
-    46% {transform: translate(30px,-40px);}
-    48% {transform: translate(0px,0px);}
-    50% {transform: translate(30px,-40px);}
-    52% {transform: translate(0px,0px);}
-    54% {transform: translate(30px,-40px);}
-    56% {transform: translate(0px,0px);}
-    58% {transform: translate(30px,-40px);}
-    60% {transform: translate(0px,0px);}
-    62% {transform: translate(30px,-40px);}
-    64% {transform: translate(0px,0px);}
-    66% {transform: translate(30px,-40px);}
-    68%{transform: translate(0px,0px);}
-  
-    70% {transform: translate(30px,-40px);}
-    72% {transform: translate(0px,0px);}
-    74% {transform: translate(30px,-40px);}
-    76% {transform: translate(0px,0px);}
-    78% {transform: translate(30px,-40px);}
-    80% {transform: translate(0px,0px);}
-    82% {transform: translate(30px,-40px);}
-    84% {transform: translate(0px,0px);}
-    86% {transform: translate(30px,-40px);}
-    88% {transform: translate(0px,0px);}
-    90% {transform: translate(30px,-40px);}
-    92% {transform: translate(0px,0px);}
-    94% {transform: translate(30px,-40px);}
-    96% {transform: translate(0px,0px);}
-    98% {transform: translate(30px,-40px);}
-    100% {transform: translate(0px,0px);}
+     </div> <!-- / .col 6/8 -->
+    
+     
+     <div class="col-12 col-lg-3 order-md-2">
+     
+     
+     
+     <div id="login">
+     <form action="/cgi-bin/koha/opac-user.pl" method="post" name="auth" id="auth" autocomplete="off">
+     <input type="hidden" name="koha_login_context" value="opac">
+     <fieldset class="brief">
+     <legend>Acesse sua conta:</legend>
+     <label for="userid">Login:</label>
+     <input class="form-control" type="text" id="userid" name="userid">
+     <label for="password">Senha:</label>
+     <input class="form-control" type="password" id="password" name="password">
+     <fieldset class="action">
+     <input class="btn btn-primary" type="submit" value="Login">
+     </fieldset>
+     
+     
+     
+     </fieldset>
+     </form>
+     </div> <!-- /#login -->
+     
+     
+     
+     
+     
+    
+     </div> <!-- / .col -->
+     
+    
+     </div> <!-- /.container-fluid -->
+     </div> <!-- /.row -->
+    </div> <!-- /.main -->
     
     
-}
+    
+    
+    
+    
+    
+    
+    
+    
+     
+     
+    
+     
+     <div class="container-fluid">
+     <div class="row">
+     <div class="col">
+     <div id="report-koha-url">
+     <div class="row justify-content-between">
+     
+     
+     <div class="col">
+     <div id="koha_url" class="clearfix noprint">
+     <p>Powered by  <a class="koha_url" href="http://koha-community.org">Koha</a>
+     </p>
+     </div> <!-- /#koha_url -->
+     </div> <!-- /.col -->
+     
+     </div> <!-- /.row.justify-content-between -->
+     </div> <!-- /#report-koha-url -->
+     </div> <!-- /.col -->
+     </div> <!-- /.row -->
+     </div> <!-- /.container-fluid -->
+     
+     </div> <!-- / #wrapper in masthead.inc -->
 
-@media(min-width: 1200px){
-    h1 {
-        font-size: 5rem;
-    }
-    .fas {
-        font-size: 5rem;
-    }
-}
-@media(max-width: 800px){
-    .container {
-        padding: 0 1rem;
-    }
-    h1 {
-        font-size: 3rem;
-    }
-}
-@media(max-width: 500px){
-    h1 {
-        font-size: 2.5 rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-}
-    </style>
-    <!--Fim da animação-->
-
+     <!--Novas imagens do koha-->
+     <img src="./imagens/icone-biblioteca-semed.png" alt="icone da biblioeca da semed"> 
+     <img src="./imagens/logo-semed.png" alt="logo semed">
+     <!-- Fim das novas imagens do koha-->
+    
+     
+    
+    
     <!-- JavaScript includes -->
     <script src="/opac-tmpl/bootstrap/lib/jquery/jquery-3.4.1.min_21.0502000.js"></script>
     <script src="/opac-tmpl/bootstrap/lib/jquery/jquery-migrate-3.1.0.min_21.0502000.js"></script>
     <script src="/opac-tmpl/bootstrap/lib/jquery/jquery-ui-1.12.1.min_21.0502000.js"></script>
     <script>
-      // Resolve name collision between jQuery UI and Twitter Bootstrap
-      $.widget.bridge("uitooltip", $.ui.tooltip);
+    // Resolve name collision between jQuery UI and Twitter Bootstrap
+    $.widget.bridge('uitooltip', $.ui.tooltip);
     </script>
     <script src="/opac-tmpl/bootstrap/lib/bootstrap/js/bootstrap.bundle.min_21.0502000.js"></script>
     <script src="/opac-tmpl/bootstrap/lib/fontfaceobserver.min_21.0502000.js"></script>
     <script src="/opac-tmpl/bootstrap/js/global_21.0502000.js"></script>
     <script>
-      Modernizr.load([
-        // Test need for polyfill
-        {
-          test: window.matchMedia,
-          nope: "/opac-tmpl/bootstrap/lib/media.match.min_21.0502000.js",
-        },
-        // and then load enquire
-        "/opac-tmpl/bootstrap/lib/enquire.min_21.0502000.js",
-        "/opac-tmpl/bootstrap/js/script_21.0502000.js",
-      ]);
-
-      // Fix for datepicker in a modal
-      $.fn.modal.Constructor.prototype.enforceFocus = function () {};
+        Modernizr.load([
+            // Test need for polyfill
+            {
+                test: window.matchMedia,
+                nope: "/opac-tmpl/bootstrap/lib/media.match.min_21.0502000.js"
+            },
+            // and then load enquire
+            "/opac-tmpl/bootstrap/lib/enquire.min_21.0502000.js",
+            "/opac-tmpl/bootstrap/js/script_21.0502000.js",
+        ]);
+    
+        // Fix for datepicker in a modal
+        $.fn.modal.Constructor.prototype.enforceFocus = function () {};
     </script>
-
+    
     <script>
-      var NO_AMAZON_IMAGE = _("Capa não disponível");
+            var NO_AMAZON_IMAGE = _("Capa não disponível");
+    
     </script>
     <script src="/opac-tmpl/bootstrap/js/amazonimages_21.0502000.js"></script>
-
+    
+    
     <script>
-      var MSG_CONFIRM_AGAIN = _(
-        "Atenção: não pode continuar. Por favor, confirme mais uma vez"
-      );
-      var MSG_DELETE_SEARCH_HISTORY = _(
-        "Confirma que deseja excluir o histórico de pesquisa?"
-      );
-      var MSG_NO_SUGGESTION_SELECTED = _("Nenhuma sugestão foi selecionada");
-      var MSG_SEARCHING = _("Pesquisando %s...");
-      var MSG_ERROR_SEARCHING_COLLECTION = _("Erro ao pesquisar %s coleção");
-      var MSG_NO_RESULTS_FOUND_IN_COLLECTION = _(
-        "Nenhum resultado encontrado na biblioteca %s coleção"
-      );
-      var MSG_RESULTS_FOUND_IN_COLLECTION = _(
-        "Encontrado %s resultados na biblioteca %s coleção"
-      );
-      var MSG_BY = _("por");
-      var MSG_TYPE = _("Tipo");
-      var MSG_NEXT = _("Próximo");
-      var MSG_PREVIOUS = _("Anterior");
-      var MSG_CHECKOUTS = _("Empréstimos");
-      var MSG_NO_CHECKOUTS = _("Sem empréstimos");
-      var MSG_CHECK_OUT = _("Empréstimo");
-      var MSG_CHECK_OUT_CONFIRM = _(
-        "Tem certeza de que deseja emprestar este exemplar?"
-      );
-      var MSG_CHECKED_OUT_UNTIL = _("Emprestado até %s");
-      var MSG_CHECK_IN = _("Verificar item");
-      var MSG_CHECK_IN_CONFIRM = _(
-        "Tem certeza de que deseja devolver este item?"
-      );
-      var MSG_NO_CHECKOUTS = _("Sem empréstimos");
-      var MSG_DOWNLOAD = _("Download");
-      var MSG_HOLDS = _("Reservas");
-      var MSG_NO_HOLDS = _("Sem reservas");
-      var MSG_PLACE_HOLD = _("Reservar");
-      var MSG_CANCEL_HOLD = _("Cancelar");
-      var MSG_CANCEL_HOLD_CONFIRM = _(
-        "Tem a certeza que quer cancelar esta reserva?"
-      );
-      var MSG_ON_HOLD = _("Reservado");
-
-      var MSG_TAGS_DISABLED = _(
-        "Desculpe, o uso de tags não está habilitado neste sistema."
-      );
-      var MSG_TAG_ALL_BAD = _(
-        "Nota: sua tag era inteiramente código de marcação. Não foi adicionada. Tente novamente somente com texto."
-      );
-      var MSG_ILLEGAL_PARAMETER = _("Erro! Parâmetro ilegal");
-      var MSG_TAG_SCRUBBED = _(
-        "Nota: sua etiqueta possuia código de marcação que foi removido. A tag foi adicionada como "
-      );
-      var MSG_ADD_TAG_FAILED = _("Erro! Falha ao adicionar tags em");
-      var MSG_ADD_TAG_FAILED_NOTE = _(
-        "Nota: você só pode atribuir uma vez a mesma tag. Clique em 'Minhas tags' para ver seu conjunto de tags."
-      );
-      var MSG_DELETE_TAG_FAILED = _("Erro! Você não pode apagar a tag");
-      var MSG_DELETE_TAG_FAILED_NOTE = _(
-        "Nota: você só pode apagar suas próprias tags."
-      );
-      var MSG_LOGIN_REQUIRED = _(
-        "Você precisa estar logado para adicionar tags."
-      );
-      var MSG_TAGS_ADDED = _("Tags adicionadas: ");
-      var MSG_TAGS_DELETED = _("Tags adicionadas: ");
-      var MSG_TAGS_ERRORS = _("Erros: ");
-      var MSG_MULTI_ADD_TAG_FAILED = _(
-        "Não é possível adicionar uma ou mais tags."
-      );
-      var MSG_NO_TAG_SPECIFIED = _("Nenhuma tag foi especificada.");
-
-      $(window).load(function () {
-        verify_images();
-      });
-
-      $(".print-large").on("click", function () {
-        window.print();
-        return false;
-      });
-      $(".addtoshelf").on("click", function (e) {
-        e.preventDefault();
-        Dopop(this.href);
-      });
-      $("body").on("click", ".addtocart", function (e) {
-        e.preventDefault();
-        var biblionumber = $(this).data("biblionumber");
-        addRecord(biblionumber);
-      });
-      $("body").on("click", ".cartRemove", function (e) {
-        e.preventDefault();
-        var biblionumber = $(this).data("biblionumber");
-        delSingleRecord(biblionumber);
-      });
-      $(".clearsh").on("click", function () {
-        return confirmDelete(MSG_DELETE_SEARCH_HISTORY);
-      });
+    
+        var MSG_CONFIRM_AGAIN = _("Atenção: não pode continuar. Por favor, confirme mais uma vez")
+        var MSG_DELETE_SEARCH_HISTORY = _("Confirma que deseja excluir o histórico de pesquisa?");
+        var MSG_NO_SUGGESTION_SELECTED = _("Nenhuma sugestão foi selecionada");
+        var MSG_SEARCHING = _("Pesquisando %s...");
+        var MSG_ERROR_SEARCHING_COLLECTION = _("Erro ao pesquisar %s coleção");
+        var MSG_NO_RESULTS_FOUND_IN_COLLECTION = _("Nenhum resultado encontrado na biblioteca %s coleção");
+        var MSG_RESULTS_FOUND_IN_COLLECTION = _("Encontrado %s resultados na biblioteca %s coleção");
+        var MSG_BY = _("por");
+        var MSG_TYPE = _("Tipo");
+        var MSG_NEXT = _("Próximo");
+        var MSG_PREVIOUS = _("Anterior");
+        var MSG_CHECKOUTS = _("Empréstimos");
+        var MSG_NO_CHECKOUTS = _("Sem empréstimos");
+        var MSG_CHECK_OUT = _("Empréstimo");
+        var MSG_CHECK_OUT_CONFIRM = _("Tem certeza de que deseja emprestar este exemplar?");
+        var MSG_CHECKED_OUT_UNTIL = _("Emprestado até %s");
+        var MSG_CHECK_IN = _("Verificar item");
+        var MSG_CHECK_IN_CONFIRM = _("Tem certeza de que deseja devolver este item?");
+        var MSG_NO_CHECKOUTS = _("Sem empréstimos");
+        var MSG_DOWNLOAD = _("Download");
+        var MSG_HOLDS = _("Reservas");
+        var MSG_NO_HOLDS = _("Sem reservas");
+        var MSG_PLACE_HOLD = _("Reservar");
+        var MSG_CANCEL_HOLD = _("Cancelar");
+        var MSG_CANCEL_HOLD_CONFIRM = _("Tem a certeza que quer cancelar esta reserva?");
+        var MSG_ON_HOLD = _("Reservado");
+    
+        
+            var MSG_TAGS_DISABLED = _("Desculpe, o uso de tags não está habilitado neste sistema.");
+            var MSG_TAG_ALL_BAD = _("Nota: sua tag era inteiramente código de marcação. Não foi adicionada. Tente novamente somente com texto.");
+            var MSG_ILLEGAL_PARAMETER = _("Erro! Parâmetro ilegal");
+            var MSG_TAG_SCRUBBED = _("Nota: sua etiqueta possuia código de marcação que foi removido. A tag foi adicionada como ");
+            var MSG_ADD_TAG_FAILED = _("Erro! Falha ao adicionar tags em");
+            var MSG_ADD_TAG_FAILED_NOTE = _("Nota: você só pode atribuir uma vez a mesma tag. Clique em 'Minhas tags' para ver seu conjunto de tags.");
+            var MSG_DELETE_TAG_FAILED = _("Erro! Você não pode apagar a tag");
+            var MSG_DELETE_TAG_FAILED_NOTE = _("Nota: você só pode apagar suas próprias tags.")
+            var MSG_LOGIN_REQUIRED = _("Você precisa estar logado para adicionar tags.");
+            var MSG_TAGS_ADDED = _("Tags adicionadas: ");
+            var MSG_TAGS_DELETED = _("Tags adicionadas: ");
+            var MSG_TAGS_ERRORS = _("Erros: ");
+            var MSG_MULTI_ADD_TAG_FAILED = _("Não é possível adicionar uma ou mais tags.");
+            var MSG_NO_TAG_SPECIFIED = _("Nenhuma tag foi especificada.");
+        
+        
+        
+        
+    
+        
+            $(window).load(function() {
+                verify_images();
+             });
+        
+        $(".print-large").on("click",function(){
+            window.print();
+            return false;
+        });
+        $(".addtoshelf").on("click",function(e){
+            e.preventDefault();
+            Dopop( this.href );
+        });
+        $("body").on("click", ".addtocart", function(e){
+            e.preventDefault();
+            var biblionumber = $(this).data("biblionumber");
+            addRecord( biblionumber );
+        });
+        $("body").on("click", ".cartRemove", function(e){
+            e.preventDefault();
+            var biblionumber = $(this).data("biblionumber");
+            delSingleRecord( biblionumber );
+        });
+        $(".clearsh").on("click", function(){
+            return confirmDelete(MSG_DELETE_SEARCH_HISTORY);
+        });
+    
     </script>
-
-    <script src="/opac-tmpl/bootstrap/js/basket_21.0502000.js"></script>
-
+    
+    
+     <script src="/opac-tmpl/bootstrap/js/basket_21.0502000.js"></script>
+    
+    
     <script src="/opac-tmpl/bootstrap/js/tags_21.0502000.js"></script>
-
-    <script src="/opac-tmpl/bootstrap/js/localcovers_21.0502000.js"></script>
-    <script>
-      var NO_LOCAL_JACKET = _("Capa não disponível");
-    </script>
-
+    
+    
+    
+    
+     <script src="/opac-tmpl/bootstrap/js/localcovers_21.0502000.js"></script>
+     <script>
+    
+        var NO_LOCAL_JACKET = _("Capa não disponível");
+    
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    
     <script src="/opac-tmpl/bootstrap/lib/jquery/plugins/jquery.cookie.min_21.0502000.js"></script>
     <script>
-      $(document).ready(function () {
-        if ($("#searchsubmit").length) {
-          $(document).on("click", "#searchsubmit", function (e) {
-            jQuery.removeCookie("form_serialized", { path: "/" });
-            jQuery.removeCookie("form_serialized_limits", { path: "/" });
-            jQuery.removeCookie("num_paragraph", { path: "/" });
-            jQuery.removeCookie("search_path_code", { path: "/" });
-          });
+    $(document).ready(function() {
+        if($('#searchsubmit').length) {
+            $(document).on("click", '#searchsubmit', function(e) {
+                jQuery.removeCookie("form_serialized", { path: '/'});
+                jQuery.removeCookie("form_serialized_limits", { path: '/'});
+                jQuery.removeCookie("num_paragraph", { path: '/'});
+                jQuery.removeCookie("search_path_code", { path: '/'});
+            });
         }
-      });
+    });
     </script>
-
-    <script>
-      var news = $("#news");
-      if (news.length > 0) {
+    
+    
+     <script>
+            var news = $("#news");
+    if(news.length > 0){
         $("#opacmainuserblock").after("<h1 id=textoEvento >Eventos</h1>");
-        $("#textoEvento").after($("#news"));
-      }
-    </script>
-    <!--Animação lapis-->
-    <script>
-    class TypeWriter {
-        constructor(txtElement, words, wait = 3000) {
-            this.txtElement = txtElement;
-            this.words = words;
-            this.txt = '';
-            //index of the the current string being typedout
-            this.wordIndex = 0;
-            //this.wait must be a base 10 interger
-            this.wait = parseInt(wait, 10);
-            //method type()
-            this.type();
-            // Boolean if the word is currently deleting
-            this.isDeleting = false;
-        }
-
-        
-        type() {
-            //current index of words
-            const current = this.wordIndex % this.words.length;
-            //get full text of current word
-            const fullTxt = this.words[current];
-
-            // check if deleting
-            if (this.isDeleting){
-            //remove character
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-            //add a charaacter
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }            
-
-        
-    
-
-            // insert txt into element
-            this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-            //type speed for when it is typing, deleting and pausing after deletion
-
-            let typeSpeed = 300;
-
-            //select pencil icon for writting animation
-            const typingElement = document.querySelector('.fas');
-
-            if (this.isDeleting){
-                typeSpeed /= 4;        
-            }
-     
-            if(this.isDeleting){
-                typingElement.className = "fas fa-pencil-alt erasing-animation";
-            }else{
-                typingElement.className = "fas fa-pencil-alt writing-animation";
-            }
-
-            // if word is complete
-            if(!this.isDeleting && this.txt === fullTxt){
-                // make pause at end
-                typeSpeed = this.wait;
-                //set delete to true
-                this.isDeleting = true;
-                //will stop the pencil animation after word completion
-                typingElement.className = "fas fa-pencil-alt";
-
-
-            } else if (this.isDeleting && this.txt === ''){
-                this.isDeleting = false;
-                //move to the next word in the HTML property
-                this.wordIndex++;
-                // pause time before the word start typing
-                typeSpeed = 1000;
-
-            }
-
-            setTimeout(() => this.type(), typeSpeed)
-        }
+        $("#textoEvento").after($("#news"));  
     }
-
-
-//Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-//Init App
-function init() {
-    const txtElement = document.querySelector('.txt-type');
-    // const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const words = ["Escolares Integradas.", "Escolares Municipais.", "Escolares Online."];
-  
-  
-    // const wait = txtElement.getAttribute('data-wait');
-  const wait = 2500;
+        </script>
     
-    new TypeWriter(txtElement, words, wait);
-}
-    </script>
-  </body>
-  <grammarly-desktop-integration
-    data-grammarly-shadow-root="true"
-  ></grammarly-desktop-integration>
-</html>
+    
+    
+    
+    
+    
+    
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
