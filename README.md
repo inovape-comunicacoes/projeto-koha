@@ -312,7 +312,8 @@ Se você pulou a parte de como estilizar um anuncio não deve ter entendido a pr
 so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o titulo, texto, data e imagem do anúncio.
 ```hml
 <!-- Noticias -->
-<section class="Noticia">
+<!-- altere o valor da propriedade background-color -->
+<section class="Noticia" style="background-color: blue;">
     <style>
         .Noticia {
           display: flex;
@@ -427,7 +428,7 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
             }
         }
       </style>
-    <div class="primeira-coluna">
+    <div class="primeira-coluna" style="order: 1;">
         <!-- Altere aqui o nome do Titulo do anúncio-->
         <h2 class="titulo-noticia">
             Mude o nome da escola
@@ -444,7 +445,7 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
             </a>
         </div>
     </div>
-    <div class="segunda-coluna">
+    <div class="segunda-coluna" style="order: 2;">
     <!-- Altere aqui o texto do anúncio -->
         <p class="paragrafo-noticia">        
                 "Ler &eacute;     legal a qualquer hora" foi o lema usado na produ&ccedil;&atilde;o teatral e no incentivo na forma&ccedil;&atilde;o dos leitores. As escolheram o livro e produziram a pe&ccedil;a com orienta&ccedil;&atilde;o do biblioec&aacute;rio e professores. Agora est&atilde;o convidado a comunidade para participarem da apresenta&ccedil;&atilde;o.
@@ -460,7 +461,7 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
             </span>
         </div>
     </div>
-    <div class="terceira-coluna">
+    <div class="terceira-coluna" style="order: 3;">
         <!-- Altere aqui a imagem do anúncio -->
         <img 
             src="https://www.canoas.rs.gov.br/ wp-content/uploads/2019/08/Pablo-Reis-30.jpg" alt="professora dando uma palestra" class="imagem-noticia" />
