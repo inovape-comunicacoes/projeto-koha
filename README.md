@@ -11,6 +11,7 @@ OBS: Mesmo quem não entende nada de html ou css pode copiar o modelo pronto e e
 <br></br>
 <h2>Sumario</h2>
 
+- [Sobre o editor de texto](#sobre-o-editor-de-texto)
 - [Uma breve introdução ao HTML](#uma-breve-introdução-ao-html)
 - [Como estilizar os anúncios](#como-estilizar-os-anúncios)
 - [Dicas de css](#dicas-de-css)
@@ -22,10 +23,26 @@ OBS: Mesmo quem não entende nada de html ou css pode copiar o modelo pronto e e
 
  
 
+# Sobre o editor de texto
+<h2>Não pule essa etapa</h2>
+Você pode querer testar como fica o anuncio antes de colocar no site koha opac, para saber mais sobre continue a leitura.
+<br></br>
+<h2>Para que preciso de um editor de texto?</h2>
+Se você ja é um usuário experiente de computadores já deve saber sobre os editores de texto como word ou bloco de notas, eles servem para escrever alguns texto, porém não servem para editar o html e css, para fazer isso recomendo o uso do editor VScode, nele você consegue visualizar o documento html no navegador e é muito mais intuitivo, ele está disponivel em todas as plataformas, Windows, MacOS e Linux.
+<br></br>
+<h2>Sobre o VS Code</h2>
+Ele é bem simples de usar e da pra personalizar como você quiser, mas esse não é o foco no momento, vou deixar o link para você instalar:
+[Vs code](https://code.visualstudio.com/download)
+<br></br>
+<h3>Primeiros passos no vs code</h3>
+primeiro crie um arquivo index.html, abra o arquivo usando o vs code e cole o seguinte codigo dentro do arquivo:
+```
+<html>
+</>
+```
 
 
-
-
+<br></br>
 # Uma breve introdução ao HTML
 Essa sessão foi criada caso queira saber um pouco mais sobre html para modificar os anúncios do koha. Se você não pretende fazer modificações na estrutura do anúncio, e sim fazer modificações estéticas como cores e ordem dos elementos, pule essa sessão e vá para a parte de [Como estilizar os anuncios](#como-estilizar-os-anuncios)
 <p>
@@ -318,7 +335,7 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
         .Noticia {
           display: flex;
           flex-direction: row;
-          background-color: #730d73;
+          background-color: #730d73; /* altere esse codigo #730d73 para o codigo de outra cor em heaxadecimal, não esqueça de colocar o # ele é necessário para pegar a cor, você tambem pode colocar em hexadecimal, em caso de duvida volte na sessão de estilização*/
           padding: 20px 10px;
           color: #fff;
           justify-content: space-evenly;
@@ -358,12 +375,7 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
           justify-content: center;
         }
 
-        .logo-instagram {
-          width: 32px;
-        }
-
-        .titulo-noticia {
-          color: #fff;
+        .logo-instagram {~
           text-align: center;
           font-size: 2em;
         }
@@ -472,3 +484,6 @@ so copie e cole o codigo abaixo na pagina de anúncio. Não esqueça de mudar o 
 
 
 # Dúvidas
+<h2>Alguns casos de erro</h2>
+Caso você tenha seguido todo o passo a passo e mesmo assim tenha acontecido um erro é bom verificar
+se todos os sinais foram colocados, exemplo "<", ">", "{", "}". 
