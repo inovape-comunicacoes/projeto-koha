@@ -35,11 +35,29 @@ Ele é bem simples de usar e da pra personalizar como você quiser, mas esse nã
 [Vs code](https://code.visualstudio.com/download)
 <br></br>
 <h3>Primeiros passos no vs code</h3>
-primeiro crie um arquivo index.html, abra o arquivo usando o vs code e cole o seguinte codigo dentro do arquivo:
+primeiro crie um arquivo index.html, abra o arquivo usando o vs code. Caso você não saiba como usar o vs code, pesquise algum video no youtube de alguém que vai lhe ensinar a melhor forma de usar Vs code no seu sistema operacional, linux, windows ou macos.
+Existe uma opção de que inicia um rascunho html para você não precisar se preocupar com isso, digite html:5, o proprio editor deve oferecer essa opção(html:5) clique para que o editor mostre o rascunho de html, caso esse rascunho não apareceu para você, cole o codigo abaixo no seu arquivo index.html:
 ```
-<html>
-</>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do anúncio</title>
+</head>
+<body>
+     <!-- Escreva seu código html abaixo -->
+
+     <!----------------->
+</body>
+</html>
 ```
+Várias dessas tags html são tags de cofiguração e não há necessidade de explicar o que cada uma faz, elas são necessárias em todos os elementos html, agora que você colou o código acima, cole o código do fim da pagina dentro da tag body, [Código do Anúncio](#anúncio-completo).
+
+<h3>Como visualizar meu anúncio no navegador?</h3>
+Você precisa instalar uma extensão no Vs Code chamada "Live Server", é fácil de instalar, se você já está no seu arquivo html deve ter visto um menu lateral no lado esquerdo, existe uma opção com um icone com 4 quadrados no total, 3 juntos e 1 separado, caso não esteja encontrando esse icone passe o mouse em cima de cada icone que o próprio app vai mostrar o nome, escolha a opção "Extenções" e pesquise "Live Server" desenvolvida por "Ritwick Dey", clique na extensão para abrir a página, instale e verifique se está ativa.
+Após instalar e ativar a extensão clique an opcção no canto inferior direito "go live" isso vai abrir uma pagina no seu navegador com o html do que jeito que vai ficar no site, demora alguns segundos então é necessário esperar.
 
 
 <br></br>
@@ -47,10 +65,10 @@ primeiro crie um arquivo index.html, abra o arquivo usando o vs code e cole o se
 Essa sessão foi criada caso queira saber um pouco mais sobre html para modificar os anúncios do koha. Se você não pretende fazer modificações na estrutura do anúncio, e sim fazer modificações estéticas como cores e ordem dos elementos, pule essa sessão e vá para a parte de [Como estilizar os anuncios](#como-estilizar-os-anuncios)
 <p>
 O html é uma linguagem feita para criar paginas web.
-Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome do elemento entre "<" e ">". O nome de um elemento dentro de uma tag é insensível a maiúsculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. Por exemplo, a tag 
+Um elemento HTML é separado de outro texto em um documento por "tags", que consistem no nome do elemento entre "<" e ">". O nome de um elemento dentro de uma tag é insensível a maiúsREculas e minúsculas. Isto é, pode ser escrito em maiúsculas, minúsculas ou um mistura. Por exemplo, a tag 
 
 `<title>` 
-pode ser escrita como `<Title>`, `<TITLE>` ou de qualquer outra forma.
+pode ser escrita como `<Title>`, `<TITLE>`.
 </p>
 
 ```html
